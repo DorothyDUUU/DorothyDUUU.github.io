@@ -179,6 +179,17 @@ nav a:hover {
     font-size: 1rem;
 }
 
+.social-links .social-wechat {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    background-color: rgba(135, 206, 235, 0.1);
+    color: var(--text-color);
+}
+
 /* Publications Section - Simple List Style */
 .publications-list-simple {
     list-style: none;
@@ -483,6 +494,13 @@ nav a:hover {
 }
 
 /* Blog Section */
+.coming-soon {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
 .blog-list {
     display: flex;
     flex-direction: column;
