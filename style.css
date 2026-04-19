@@ -7,13 +7,13 @@
 
 :root {
     --primary-color: #2c3e50;
-    --secondary-color: #87CEEB;
-    --accent-color: #FFB6C1;
+    --secondary-color: #87ceeb;
+    --accent-color: #ffb6c1;
     --text-color: #333333;
     --text-light: #808080;
-    --bg-color: #FFFAF0;
-    --bg-light: #FFF5EE;
-    --border-color: #E6E6FA;
+    --bg-color: #fffaf0;
+    --bg-light: #fff5ee;
+    --border-color: #e6e6fa;
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
@@ -25,7 +25,6 @@ body {
     font-size: 15px;
 }
 
-/* Navigation */
 header {
     background-color: white;
     padding: 1rem 0;
@@ -40,7 +39,7 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 nav a {
@@ -58,16 +57,14 @@ nav a:hover {
     background-color: rgba(135, 206, 235, 0.1);
 }
 
-/* Container */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-/* Sections */
 .section {
-    padding: 2rem 0;
+    padding: 2.2rem 0;
 }
 
 .section:nth-child(even) {
@@ -95,12 +92,10 @@ nav a:hover {
     border-radius: 2px;
 }
 
-/* About Section */
 .about-content {
     display: flex;
     gap: 2rem;
     align-items: start;
-    padding: 0;
 }
 
 .profile-image {
@@ -122,7 +117,7 @@ nav a:hover {
 }
 
 .profile-info h1 {
-    font-size: 1.9rem;
+    font-size: 1.95rem;
     color: var(--primary-color);
     margin-bottom: 0.3rem;
     font-weight: 600;
@@ -143,11 +138,18 @@ nav a:hover {
     font-weight: 500;
 }
 
-.profile-info .bio {
+.profile-info .bio,
+.conference-note {
     line-height: 1.7;
-    margin-bottom: 1.2rem;
-    color: var(--text-color);
+    margin-bottom: 1rem;
     font-size: 0.95rem;
+}
+
+.conference-note {
+    padding: 0.85rem 1rem;
+    background-color: rgba(135, 206, 235, 0.12);
+    border-left: 3px solid var(--secondary-color);
+    border-radius: 8px;
 }
 
 .social-links {
@@ -156,7 +158,8 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-.social-links a {
+.social-links a,
+.social-links .social-wechat {
     color: var(--text-color);
     text-decoration: none;
     font-size: 0.88rem;
@@ -179,34 +182,28 @@ nav a:hover {
     font-size: 1rem;
 }
 
-.social-links .social-wechat {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.88rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 15px;
-    background-color: rgba(135, 206, 235, 0.1);
-    color: var(--text-color);
-}
-
-/* Publications Section - Simple List Style */
-.publications-list-simple {
+.news-list,
+.publications-list-simple,
+.internship-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.publications-list-simple li {
+.news-list li,
+.publications-list-simple li,
+.internship-list li {
     margin-bottom: 1rem;
-    line-height: 1.6;
-    font-size: 0.9rem;
+    line-height: 1.65;
+    font-size: 0.92rem;
     color: var(--text-color);
     padding-left: 1.2rem;
     position: relative;
 }
 
-.publications-list-simple li:before {
+.news-list li::before,
+.publications-list-simple li::before,
+.internship-list li::before {
     content: "•";
     position: absolute;
     left: 0;
@@ -215,16 +212,38 @@ nav a:hover {
     font-size: 1.2rem;
 }
 
-.publications-list-simple .venue {
+.news-date,
+.publications-list-simple .venue,
+.internship-list .intern-period {
     display: inline-block;
-    background-color: var(--secondary-color);
     color: white;
     padding: 0.15rem 0.5rem;
     border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 600;
     margin-right: 0.5rem;
-    text-transform: uppercase;
+}
+
+.news-date,
+.publications-list-simple .venue {
+    background-color: var(--secondary-color);
+}
+
+.internship-list .intern-period {
+    background-color: var(--accent-color);
+}
+
+.news-list a,
+.publications-list-simple li a,
+.internship-list .intern-role a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.news-list a:hover,
+.publications-list-simple li a:hover,
+.internship-list .intern-role a:hover {
+    text-decoration: underline;
 }
 
 .publications-list-simple .authors {
@@ -237,352 +256,55 @@ nav a:hover {
     color: var(--text-color);
 }
 
-.publications-list-simple li a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-size: 0.8rem;
-    margin-left: 0.3rem;
+.publication-group {
+    margin-top: 1rem;
 }
 
-.publications-list-simple li a:hover {
-    text-decoration: underline;
+.publication-group + .publication-group {
+    margin-top: 2rem;
 }
 
-/* Internship Section */
-.internship-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.publication-group h3 {
+    color: var(--primary-color);
+    font-size: 1.12rem;
+    margin-bottom: 0.85rem;
 }
 
-.internship-list li {
-    margin-bottom: 1.2rem;
-    line-height: 1.6;
-    padding-left: 1.2rem;
-    position: relative;
+.publication-subgroup + .publication-subgroup {
+    margin-top: 1.5rem;
 }
 
-.internship-list li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--secondary-color);
-    font-weight: bold;
-    font-size: 1.2rem;
+.group-label {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
 }
 
-.internship-list .intern-period {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: white;
-    padding: 0.15rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-right: 0.5rem;
+.muted-list li {
+    opacity: 0.9;
+}
+
+.experience-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.3rem;
 }
 
 .internship-list .intern-company {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
     font-weight: 600;
     color: var(--primary-color);
 }
 
 .internship-list .intern-role {
-    font-size: 0.85rem;
-    color: var(--text-light);
-}
-
-.internship-list .intern-role a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-.internship-list .intern-role a:hover {
-    text-decoration: underline;
-}
-
-/* Publications Section - Compact Style (keep for backward compatibility) */
-.publications-compact {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.pub-item-compact {
-    padding: 0.6rem 0;
-    border-bottom: 1px dashed var(--border-color);
-    line-height: 1.5;
-    transition: all 0.3s ease;
-}
-
-.pub-item-compact:hover {
-    padding-left: 0.5rem;
-    border-left: 3px solid var(--accent-color);
-}
-
-.pub-item-compact:last-child {
-    border-bottom: none;
-}
-
-.pub-title-compact {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
-}
-
-.pub-item-compact:hover .pub-title-compact {
-    color: var(--secondary-color);
-}
-
-.pub-authors-compact {
-    font-size: 0.85rem;
-    color: var(--text-light);
-}
-
-.pub-authors-compact strong {
-    color: var(--text-color);
-    font-weight: 600;
-}
-
-.pub-venue-compact {
-    font-size: 0.83rem;
-    color: var(--secondary-color);
-    font-style: italic;
-    font-weight: 500;
-}
-
-.pub-link-compact {
-    font-size: 0.8rem;
-    color: var(--secondary-color);
-    text-decoration: none;
-    margin-left: 0.5rem;
-    padding: 0.15rem 0.5rem;
-    border-radius: 10px;
-    background-color: rgba(135, 206, 235, 0.15);
-    transition: all 0.3s ease;
-}
-
-.pub-link-compact:hover {
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-/* Old publication styles - keep for backward compatibility */
-.publications-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.publication-item {
-    padding: 1.5rem;
-    background: white;
-    border-left: 4px solid var(--secondary-color);
-    box-shadow: var(--shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.publication-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.pub-title {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.pub-authors {
-    color: var(--text-light);
-    margin-bottom: 0.3rem;
-}
-
-.pub-authors strong {
-    color: var(--text-color);
-}
-
-.pub-venue {
-    color: var(--secondary-color);
-    font-style: italic;
-    margin-bottom: 0.8rem;
-}
-
-.pub-description {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    color: var(--text-color);
-}
-
-.pub-links {
-    display: flex;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 0.5rem 1rem;
-    background-color: var(--secondary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    font-size: 0.9rem;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-}
-
-.btn-small {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
-}
-
-/* Research Section */
-.research-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.research-item {
-    padding: 1.5rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.research-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-.research-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-}
-
-.research-period {
-    color: var(--text-light);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.research-description {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.research-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.tag {
-    background-color: var(--bg-light);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-}
-
-/* Blog Section */
-.coming-soon {
-    text-align: center;
-    padding: 2rem 1rem;
-    color: var(--text-light);
-    font-style: italic;
-}
-
-.blog-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.blog-item {
-    display: flex;
-    gap: 1.5rem;
-    padding: 0.8rem;
-    border-bottom: 1px dashed var(--border-color);
-    transition: all 0.3s ease;
-    border-radius: 8px;
-}
-
-.blog-item:hover {
-    background-color: rgba(135, 206, 235, 0.05);
-    padding-left: 1.2rem;
-}
-
-.blog-item:last-child {
-    border-bottom: none;
-}
-
-.blog-date {
-    flex-shrink: 0;
-    font-weight: 600;
-    color: var(--secondary-color);
-    min-width: 70px;
-    font-size: 0.85rem;
-}
-
-.blog-content h3 {
-    margin-bottom: 0.3rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-
-.blog-content a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.blog-content a:hover {
-    color: var(--secondary-color);
-}
-
-.blog-content p {
-    color: var(--text-light);
-    line-height: 1.6;
     font-size: 0.88rem;
+    color: var(--text-light);
 }
 
-/* Contact Section */
-.contact-info {
-    padding: 0;
-}
-
-.contact-info p {
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 0.9rem;
-    padding: 0.4rem;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-
-.contact-info p:hover {
-    background-color: rgba(135, 206, 235, 0.1);
-    padding-left: 0.8rem;
-}
-
-.contact-info i {
-    color: var(--secondary-color);
-    width: 20px;
-    font-size: 1rem;
-}
-
-/* Footer */
 footer {
     background: linear-gradient(to right, var(--bg-light), white);
     color: var(--text-light);
@@ -597,7 +319,6 @@ footer p {
     margin: 0.2rem 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
@@ -616,17 +337,13 @@ footer p {
 
     nav ul {
         flex-wrap: wrap;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
-    .research-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .blog-item {
+    .experience-header {
         flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem;
+        align-items: flex-start;
+        gap: 0.35rem;
     }
 
     .section h2 {
@@ -638,6 +355,6 @@ footer p {
     }
 
     .container {
-        padding: 0 1.5rem;
+        padding: 0 1.25rem;
     }
 }
