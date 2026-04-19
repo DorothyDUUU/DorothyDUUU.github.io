@@ -12,15 +12,14 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#internship">Internship</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="#experience">Research Experience</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- About Section -->
         <section id="about" class="section">
             <div class="container">
                 <div class="about-content">
@@ -32,24 +31,27 @@
                         <p class="title">PhD Student</p>
                         <p class="affiliation">Shanghai Jiao Tong University</p>
                         <p class="bio">
-                            I am a Ph.D. student at Shanghai Jiao Tong University, supervised by Prof. <a href="https://siheng-chen.github.io/" target="_blank">Siheng Chen</a>.
-                            My research focuses on building reliable and intelligent systems at the intersection of
-                            large language models and software engineering. Specifically, I work on <strong>code generation</strong>,
-                            <strong>multi-agent systems</strong>, and <strong>federated learning for LLMs</strong>.
-                            I aim to develop autonomous systems that can collaborate, and evolve in environments.
+                            I am a Ph.D. student at Shanghai Jiao Tong University, advised by Prof.
+                            <a href="https://siheng-chen.github.io/" target="_blank" rel="noopener noreferrer">Siheng Chen</a>.
+                            My research interests include <strong>LLM agents</strong>, <strong>coding LLMs</strong>,
+                            and <strong>federated learning</strong>. Recently, I have been working on agentic systems,
+                            coding-oriented language models, and related benchmarks and resources for large model research.
+                        </p>
+                        <p class="conference-note">
+                            I will attend ICLR 2026 and would be happy to connect about research opportunities and collaborations.
                         </p>
                         <div class="social-links">
-                            <a href="https://scholar.google.com/citations?user=i_7WSl0AAAAJ&hl=en" target="_blank">
-                                <i class="fas fa-graduation-cap"></i> Google Scholar
-                            </a>
-                            <a href="https://github.com/DorothyDUUU" target="_blank">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://www.linkedin.com/in/yaxin-du-44197320b/" target="_blank">
-                                <i class="fab fa-linkedin"></i> LinkedIn
-                            </a>
                             <a href="mailto:dorothydu@sjtu.edu.cn">
                                 <i class="fas fa-envelope"></i> Email
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=i_7WSl0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-graduation-cap"></i> Google Scholar
+                            </a>
+                            <a href="https://github.com/DorothyDUUU" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/yaxin-du-44197320b/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i> LinkedIn
                             </a>
                             <span class="social-wechat">
                                 <i class="fab fa-weixin"></i> WeChat: dyx13219058049
@@ -60,114 +62,189 @@
             </div>
         </section>
 
-        <!-- Publications Section -->
+        <section id="news" class="section">
+            <div class="container">
+                <h2>News</h2>
+                <ul class="news-list">
+                    <li>
+                        <span class="news-date">Apr 2026</span>
+                        Attending ICLR 2026 and presenting
+                        <a href="https://arxiv.org/pdf/2510.02271" target="_blank" rel="noopener noreferrer">InfoMosaicBench</a>;
+                        happy to connect in person.
+                    </li>
+                    <li>
+                        <span class="news-date">Apr 2026</span>
+                        Two papers accepted to ACL 2026:
+                        <a href="https://arxiv.org/pdf/2510.24284" target="_blank" rel="noopener noreferrer">MCP-Flow</a>
+                        and
+                        <a href="https://arxiv.org/pdf/2504.12661" target="_blank" rel="noopener noreferrer">VLMGuard-R1</a>.
+                    </li>
+                    <li>
+                        <span class="news-date">Apr 2026</span>
+                        Released the InCoder paper series.
+                        <a href="https://huggingface.co/papers/2603.16790" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                    </li>
+                    <li>
+                        <span class="news-date">Feb 2026</span>
+                        Released
+                        <a href="https://arxiv.org/pdf/2601.22055" target="_blank" rel="noopener noreferrer">G²-Reader</a>.
+                    </li>
+                    <li>
+                        <span class="news-date">Jan 2026</span>
+                        Joined iQuest Lab, Ubiquant, as a Research Intern, working on foundation model training and coding LLM mid-training.
+                    </li>
+                    <li>
+                        <span class="news-date">Jan 2026</span>
+                        <a href="https://arxiv.org/pdf/2510.02271" target="_blank" rel="noopener noreferrer">InfoMosaicBench</a>
+                        was accepted to ICLR 2026.
+                    </li>
+                    <li>
+                        <span class="news-date">Dec 2025</span>
+                        Presented
+                        <a href="https://arxiv.org/pdf/2505.16975" target="_blank" rel="noopener noreferrer">SWE-Dev</a>
+                        at the NeurIPS 2025 Workshop.
+                    </li>
+                    <li>
+                        <span class="news-date">Sep 2025</span>
+                        Joined TikTok AI Innovation Center as a Research Intern, mentored by
+                        <a href="https://scholar.google.com/citations?user=bcbeUo0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Qian Liu</a>.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <section id="publications" class="section">
             <div class="container">
                 <h2>Publications</h2>
-                <ul class="publications-list-simple">
-                    <li>
-                        <span class="venue">Under Review</span> $ G^2 $-Reader: Dual Evolving Graphs for Multimodal Document QA<br>
-                        <span class="authors"><strong>Yaxin Du*</strong>, Junru Song*, Yifan Zhou*, Cheng Wang, Jiahao Gu, Zimeng Chen, Menglan Chen, Wen Yao, Yang Yang, Ying Wen, et al.</span>
-                        <a href="https://arxiv.org/abs/2601.22055" target="_blank">[arXiv]</a>
-                    </li>
-                    <li>
-                        <span class="venue">ICLR 2026</span> InfoMosaic-Bench: Evaluating Multi-Source Information Seeking in Tool-Augmented Agents<br>
-                        <span class="authors"><strong>Yaxin Du</strong>, Yuanshuo Zhang, Xiyuan Yang, Yifan Zhou, Cheng Wang, Gongyi Zou, Xianghe Pang, Zhiyu Li, Siheng Chen</span>
-                    </li>
 
-                    <li>
-                        <span class="venue">NeurIPS 2025 Workshop</span> SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development<br>
-                        <span class="authors"><strong>Yaxin Du*</strong>, Yuzhu Cai*, Yifan Zhou, Cheng Wang, Yu Qian, Xianghe Pang, Qian Liu, Yue Hu, Siheng Chen</span>
-                        <a href="https://github.com/DorothyDUUU/SWE-Dev" target="_blank">[Code]</a>
-                    </li>
+                <div class="publication-group">
+                    <h3>Selected Publications</h3>
+                    <div class="publication-subgroup">
+                        <p class="group-label">First-Author Publications</p>
+                        <ul class="publications-list-simple">
+                            <li>
+                                <span class="venue">ICLR 2026</span> InfoMosaicBench: Evaluating Multi-Source Information Seeking in Tool-Augmented Agents<br>
+                                <span class="authors"><strong>Yaxin Du</strong>, Yuanshuo Zhang, Xiyuan Yang, Yifan Zhou, Cheng Wang, Gongyi Zou, Xianghe Pang, Zhiyu Li, Siheng Chen</span>
+                                <a href="https://arxiv.org/pdf/2510.02271" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                            </li>
+                            <li>
+                                <span class="venue">ACL 2026</span> MCP-Flow<br>
+                                <span class="authors"><strong>Yaxin Du</strong>, et al.</span>
+                                <a href="https://arxiv.org/pdf/2510.24284" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                            </li>
+                            <li>
+                                <span class="venue">ACL 2026</span> VLMGuard-R1<br>
+                                <span class="authors"><strong>Yaxin Du</strong>, et al.</span>
+                                <a href="https://arxiv.org/pdf/2504.12661" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                            </li>
+                            <li>
+                                <span class="venue">arXiv 2026</span> InCoder Series<br>
+                                <span class="authors"><strong>Yaxin Du</strong>, et al.</span>
+                                <a href="https://huggingface.co/papers/2603.16790" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                            </li>
+                            <li>
+                                <span class="venue">arXiv 2026</span> G²-Reader: Dual Evolving Graphs for Multimodal Document QA<br>
+                                <span class="authors"><strong>Yaxin Du*</strong>, Junru Song*, Yifan Zhou*, Cheng Wang, Jiahao Gu, Zimeng Chen, Menglan Chen, Wen Yao, Yang Yang, Ying Wen, et al.</span>
+                                <a href="https://arxiv.org/pdf/2601.22055" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                            </li>
+                            <li>
+                                <span class="venue">NeurIPS 2025 Workshop</span> SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development<br>
+                                <span class="authors"><strong>Yaxin Du*</strong>, Yuzhu Cai*, Yifan Zhou, Cheng Wang, Yu Qian, Xianghe Pang, Qian Liu, Yue Hu, Siheng Chen</span>
+                                <a href="https://arxiv.org/pdf/2505.16975" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                <a href="https://github.com/DorothyDUUU/SWE-Dev" target="_blank" rel="noopener noreferrer">[Code]</a>
+                            </li>
+                            <li>
+                                <span class="venue">ACL 2025 Findings</span> Data Quality Control in Federated Instruction-tuning of Large Language Models<br>
+                                <span class="authors"><strong>Yaxin Du</strong>, Rui Ye, Fengting Yuchi, Wanru Zhao, Jingjing Qu, Yanfeng Wang, Siheng Chen</span>
+                            </li>
+                            <li>
+                                <span class="venue">ICLR 2024 Workshop</span> Enhancing Data Quality in Federated Fine-tuning of Large Language Models<br>
+                                <span class="authors">Wanru Zhao*, <strong>Yaxin Du*</strong>, Nicholas Lane, Siheng Chen, Yanfeng Wang</span>
+                            </li>
+                            <li>
+                                <span class="venue">RadarConf 2022</span> A ViT Approach for Short-range Behaviour Recognition Using Radar Signals<br>
+                                <span class="authors"><strong>Yaxin Du</strong>, Bingliang Li, Jipeng Li, Francesco Fioranelli, Julien Le Kernec</span>
+                            </li>
+                            <li>
+                                <span class="venue">CIE Radar 2021</span> Radar-based Human Activity Classification with Cyclostationarity<br>
+                                <span class="authors"><strong>Yaxin Du</strong>, Jipeng Li, Zhouyixian Li, Ran Yu, Antonio Napolitano, Francesco Fioranelli, Julien Le Kernec</span>
+                            </li>
+                        </ul>
+                    </div>
 
-                    <li>
-                        <span class="venue">ICML 2025</span> MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems<br>
-                        <span class="authors">Rui Ye, Shuo Tang, Rui Ge, <strong>Yaxin Du</strong>, Zhenfei Yin, Siheng Chen, Jing Shao</span>
-                    </li>
+                    <div class="publication-subgroup">
+                        <p class="group-label">Co-Author Publications</p>
+                        <ul class="publications-list-simple">
+                            <li>
+                                <span class="venue">ICML 2025</span> MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems<br>
+                                <span class="authors">Rui Ye, Shuo Tang, Rui Ge, <strong>Yaxin Du</strong>, Zhenfei Yin, Siheng Chen, Jing Shao</span>
+                            </li>
+                            <li>
+                                <span class="venue">ICLR 2025</span> Self-evolving Multi-agent Collaboration Networks for Software Development<br>
+                                <span class="authors">Yue Hu, Yuzhu Cai, <strong>Yaxin Du</strong>, Xinyu Zhu, Xiangrui Liu, Zijie Yu, Yuchen Hou, Shuo Tang, Siheng Chen</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <li>
-                        <span class="venue">ICLR 2025</span> Self-evolving Multi-agent Collaboration Networks for Software Development<br>
-                        <span class="authors">Yue Hu, Yuzhu Cai, <strong>Yaxin Du</strong>, Xinyu Zhu, Xiangrui Liu, Zijie Yu, Yuchen Hou, Shuo Tang, Siheng Chen</span>
-                    </li>
-
-                    <li>
-                        <span class="venue">ACL 2025 Findings</span> Data Quality Control in Federated Instruction-tuning of Large Language Models<br>
-                        <span class="authors"><strong>Yaxin Du</strong>, Rui Ye, Fengting Yuchi, Wanru Zhao, Jingjing Qu, Yanfeng Wang, Siheng Chen</span>
-                    </li>
-
-                    <li>
-                        <span class="venue">EMNLP 2025 Findings</span> Federated Instruction Tuning of LLMs with Domain Coverage Augmentation<br>
-                        <span class="authors">Zezhou Wang, <strong>Yaxin Du</strong>, Xingjun Ma, Yugang Jiang, Zhuzhong Qian, Siheng Chen</span>
-                    </li>
-
-                    <li>
-                        <span class="venue">NeurIPS 2024</span> FedLLM-Bench: Realistic Benchmarks for Federated Learning of Large Language Models<br>
-                        <span class="authors">Rui Ye, Rui Ge, Xinyu Zhu, Jingyi Chai, <strong>Yaxin Du</strong>, Yang Liu, Yanfeng Wang, Siheng Chen</span>
-                    </li>
-
-                    <li>
-                        <span class="venue">ICLR 2024 Workshop</span> Enhancing Data Quality in Federated Fine-tuning of Large Language Models<br>
-                        <span class="authors">Wanru Zhao*, <strong>Yaxin Du*</strong>, Nicholas Lane, Siheng Chen, Yanfeng Wang</span>
-                    </li>
-
-                    <li>
-                        <span class="venue">IET RSN 2024</span> Radar-based Human Activity Recognition using Denoising Techniques<br>
-                        <span class="authors">Ran Yu, <strong>Yaxin Du</strong>, Jipeng Li, Antonio Napolitano, Julien Le Kernec</span>
-                    </li>
-
-                    <li>
-                        <span class="venue">ICLR 2024</span> Fake It Till Make It: Federated Learning with Consensus-Oriented Generation<br>
-                        <span class="authors">Rui Ye, <strong>Yaxin Du</strong>, Zhenyang Ni, Siheng Chen, Yanfeng Wang</span>
-                    </li>
-
-                    <li>
-                        <span class="venue">RadarConf 2022</span> A ViT Approach for Short-range Behaviour Recognition Using Radar Signals<br>
-                        <span class="authors"><strong>Yaxin Du</strong>, Bingliang Li, Jipeng Li, Francesco Fioranelli, Julien Le Kernec</span>
-                    </li>
-
-                    <li>
-                        <span class="venue">CIE Radar 2021</span> Radar-based Human Activity Classification with Cyclostationarity<br>
-                        <span class="authors"><strong>Yaxin Du</strong>, Jipeng Li, Zhouyixian Li, Ran Yu, Antonio Napolitano, Francesco Fioranelli, Julien Le Kernec</span>
-                    </li>
-                </ul>
+                <div class="publication-group">
+                    <h3>Other Publications</h3>
+                    <div class="publication-subgroup">
+                        <p class="group-label">Co-Author Publications</p>
+                        <ul class="publications-list-simple muted-list">
+                            <li>
+                                <span class="venue">EMNLP 2025 Findings</span> Federated Instruction Tuning of LLMs with Domain Coverage Augmentation<br>
+                                <span class="authors">Zezhou Wang, <strong>Yaxin Du</strong>, Xingjun Ma, Yugang Jiang, Zhuzhong Qian, Siheng Chen</span>
+                            </li>
+                            <li>
+                                <span class="venue">NeurIPS 2024</span> FedLLM-Bench: Realistic Benchmarks for Federated Learning of Large Language Models<br>
+                                <span class="authors">Rui Ye, Rui Ge, Xinyu Zhu, Jingyi Chai, <strong>Yaxin Du</strong>, Yang Liu, Yanfeng Wang, Siheng Chen</span>
+                            </li>
+                            <li>
+                                <span class="venue">IET RSN 2024</span> Radar-based Human Activity Recognition using Denoising Techniques<br>
+                                <span class="authors">Ran Yu, <strong>Yaxin Du</strong>, Jipeng Li, Antonio Napolitano, Julien Le Kernec</span>
+                            </li>
+                            <li>
+                                <span class="venue">ICLR 2024</span> Fake It Till Make It: Federated Learning with Consensus-Oriented Generation<br>
+                                <span class="authors">Rui Ye, <strong>Yaxin Du</strong>, Zhenyang Ni, Siheng Chen, Yanfeng Wang</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Internship Section -->
-        <section id="internship" class="section">
+        <section id="experience" class="section">
             <div class="container">
-                <h2>Internship</h2>
+                <h2>Research Experience</h2>
                 <ul class="internship-list">
                     <li>
-                        <span class="intern-period">Jan 2026 - Present</span>
-                        <span class="intern-company">Ubiquant iQuest Lab</span><br>
-                        <span class="intern-role">Research Intern
+                        <div class="experience-header">
+                            <span class="intern-period">Jan 2026 - Present</span>
+                            <span class="intern-company">Research Intern, iQuest Lab, Ubiquant</span>
+                        </div>
+                        <span class="intern-role">Working on foundation model training, with a recent focus on mid-training for coding LLMs.</span>
                     </li>
                     <li>
-                        <span class="intern-period">Sep 2025 - Jan 2025</span>
-                        <span class="intern-company">TikTok AI Innovation Center</span><br>
-                        <span class="intern-role">Research Intern, mentored by <a href="https://scholar.google.com/citations?user=bcbeUo0AAAAJ&hl=en&oi=ao" target="_blank">Qian Liu</a></span>
+                        <div class="experience-header">
+                            <span class="intern-period">Sep 2025 - Jan 2026</span>
+                            <span class="intern-company">Research Intern, TikTok AI Innovation Center</span>
+                        </div>
+                        <span class="intern-role">
+                            Mentored by
+                            <a href="https://scholar.google.com/citations?user=bcbeUo0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Qian Liu</a>;
+                            worked on LLM agents, coding-related language model research, and related systems problems.
+                        </span>
                     </li>
                 </ul>
-            </div>
-        </section>
-
-        <!-- Blog Section -->
-        <section id="blog" class="section">
-            <div class="container">
-                <h2>Blog</h2>
-                <div class="coming-soon">
-                    <p>Coming soon.</p>
-                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Yaxin Du. All rights reserved.</p>
-            <p>Last updated: February 2025</p>
+            <p>&copy; 2026 Yaxin Du. All rights reserved.</p>
+            <p>Last updated: April 2026</p>
         </div>
     </footer>
 </body>
