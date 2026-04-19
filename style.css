@@ -251,6 +251,12 @@ nav a:hover {
     color: var(--text-light);
 }
 
+.citation-note {
+    font-size: 0.84rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
 .publications-list-simple .authors strong {
     font-weight: 600;
     color: var(--text-color);
@@ -270,20 +276,41 @@ nav a:hover {
     margin-bottom: 0.85rem;
 }
 
-.publication-subgroup + .publication-subgroup {
-    margin-top: 1.5rem;
-}
-
-.group-label {
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-light);
-    margin-bottom: 0.75rem;
-}
-
 .muted-list li {
     opacity: 0.9;
+}
+
+.publication-details {
+    margin-top: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 0.2rem 1rem 0.8rem;
+}
+
+.publication-details summary {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.02rem;
+    font-weight: 600;
+    padding: 0.85rem 0;
+    list-style: none;
+}
+
+.publication-details summary::-webkit-details-marker {
+    display: none;
+}
+
+.publication-details summary::after {
+    content: 'Show';
+    float: right;
+    color: var(--secondary-color);
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.publication-details[open] summary::after {
+    content: 'Hide';
 }
 
 .experience-header {
