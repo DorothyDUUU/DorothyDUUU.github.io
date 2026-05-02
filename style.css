@@ -276,6 +276,18 @@ nav a:hover {
     margin-bottom: 0.85rem;
 }
 
+.publication-subgroup + .publication-subgroup {
+    margin-top: 1.5rem;
+}
+
+.group-label {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
 .muted-list li {
     opacity: 0.9;
 }
