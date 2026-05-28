@@ -337,28 +337,48 @@
                     </div>
                 </div>
                 <p>
-                    For the RL setting, we follow the reward design used in
-                    <a href="https://arxiv.org/abs/2506.03136" target="_blank" rel="noopener noreferrer">CURE: Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning</a>.
-                    The basic idea is to give the coder a reward based on execution success, while the verifier or tester
-                    receives a reward based on whether its tests correctly separate good code from bad code.
+                    For the RL stage, I find it useful to frame the problem as <strong>MAS-RL for coder-verifier co-evolution</strong>.
+                    Realistic software development is naturally a loop: write code, write tests, and then improve the
+                    solution based on execution feedback. To learn this loop, the system needs two complementary abilities:
+                    generating runnable code and constructing tests that can actually expose mistakes.
                 </p>
                 <p>
-                    More concretely, if a sampled code solution is evaluated on a set of unit tests, the coder reward can
-                    be written as
-                    <code>R_coder = mean(pass(test_i, code))</code>,
-                    namely the average pass rate over the available tests, followed by reward normalization.
-                    For the verifier side, CURE first assigns a positive sign to a test if it accepts correct code and a
-                    negative sign otherwise, then rescales that signal according to how well the test rejects wrong code.
-                    In a compact form, this is
-                    <code>R_verifier = sign(test) x scale(test)</code>,
-                    again followed by normalization. In our setting, we use this same CURE-style idea as the starting point
-                    for the verifier reward.
+                    If these two abilities are mixed inside a single model, the training signal can easily become blurry:
+                    the model cannot cleanly distinguish whether an improvement comes from better code generation or from
+                    stronger tests. That is why we separate the roles. The <strong>Coder</strong> focuses on generating
+                    high-quality code, while the <strong>Verifier</strong> focuses on generating high-discriminative tests.
+                </p>
+                <p>
+                    The interaction protocol follows a <strong>Best-of-N</strong> style mechanism. The Coder samples
+                    multiple candidate programs, the Verifier samples multiple candidate test sets, and all code-test
+                    combinations are executed to form an execution matrix. The system then selects the strongest code
+                    according to test outcomes, and finally uses ground-truth tests as the outer signal for evaluation
+                    and optimization. This gives us a closed loop in which stronger tests push the Coder toward better
+                    code, and stronger code in turn forces the Verifier to become sharper.
+                </p>
+                <p>
+                    For the concrete reward design, we build on the ideas in
+                    <a href="https://arxiv.org/abs/2506.03136" target="_blank" rel="noopener noreferrer">CURE: Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning</a>.
+                    In the simplified notation I use for this talk, the two roles receive different rewards:
+                    <code>R_C = R_GT + lambda_ver * R_Verifier</code>
+                    for the Coder, and
+                    <code>R_V = R_P - lambda_len * Len</code>
+                    for the Verifier.
+                </p>
+                <p>
+                    Intuitively, the Coder is rewarded for both passing ground-truth tests and agreeing with the signal
+                    provided by the Verifier, while the Verifier is rewarded for precision, namely whether it correctly
+                    distinguishes good code from bad code, with an additional penalty on invalid or unnecessarily long
+                    tests. In implementation, CURE instantiates this idea through normalized execution-based rewards for
+                    code and sign-and-scale style rewards for tests. Here I keep the blog-level explanation simple, but
+                    the overall principle is the same: separate the roles, separate the reward signals, and let the two
+                    agents improve through repeated interaction.
                 </p>
                 <figure class="blog-figure narrow">
                     <img src="assets-web/image22.jpg" alt="RL training framework with coder and verifier.">
                     <figcaption>
-                        RL setup: we optimize a coder-verifier system using a CURE-style reward design, where code is rewarded
-                        by execution success and tests are rewarded by how well they validate correct code while rejecting wrong code.
+                        RL setting: a Coder and a Verifier interact through a Best-of-N execution matrix, and each role
+                        receives its own reward signal for co-evolution.
                     </figcaption>
                 </figure>
                 <div class="blog-figure-group">
