@@ -58,7 +58,7 @@
                     reasoning, another on execution, and another on verification. As single-agent models improve, the
                     ceiling of the overall system also rises.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure compact">
                     <img src="assets-web/image2.jpg" alt="Comparison of single-agent, network, and supervisor multi-agent architectures.">
                     <figcaption>
                         Three common paradigms for organizing agents: single-agent execution, networked collaboration,
@@ -82,7 +82,7 @@
                     My working view is that the real challenge is no longer just how to build MAS, but how to make MAS
                     itself trainable.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure narrow">
                     <img src="assets-web/image3.jpg" alt="Motivation for training multi-agent systems.">
                     <figcaption>
                         Why MAS needs dedicated training instead of relying only on manually written prompts and roles.
@@ -122,7 +122,7 @@
                     Reference:
                     <a href="https://arxiv.org/pdf/2503.03686" target="_blank" rel="noopener noreferrer">MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems</a>.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure compact">
                     <img src="assets-web/image4.jpg" alt="MAS-GPT overview.">
                     <figcaption>
                         MAS-GPT treats a multi-agent system as code so that architecture generation itself becomes a
@@ -137,13 +137,13 @@
                     intra-consistency, which refines a given MAS so that its roles and logic better match a specific
                     query.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure narrow">
                     <img src="assets-web/image5.jpg" alt="MAS-GPT data collection.">
                     <figcaption>
                         Building a pool of human-designed multi-agent systems before turning them into training data.
                     </figcaption>
                 </figure>
-                <figure class="blog-figure">
+                <figure class="blog-figure narrow">
                     <img src="assets-web/image6.jpg" alt="MAS-GPT data filtering.">
                     <figcaption>
                         Query-MAS matching and consistency filtering refine raw examples into stronger supervision.
@@ -153,7 +153,7 @@
                     The final training unit becomes a triplet of <code>(query, reasoning, refined MAS)</code>. This
                     turns designing MAS itself into a learnable generation problem.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure narrow">
                     <img src="assets-web/image7.jpg" alt="MAS-GPT training format.">
                     <figcaption>
                         The final training format used to supervise an MAS generator.
@@ -161,20 +161,23 @@
                 </figure>
                 <p>
                     In practice, the resulting model can generate systems that generalize better and reduce redundant
-                    collaboration compared with hand-written pipelines.
+                    collaboration compared with hand-written pipelines. The next two figures should be read together:
+                    the left one focuses on task generalization, while the right one focuses on efficiency.
                 </p>
-                <figure class="blog-figure">
-                    <img src="assets-web/image8.jpg" alt="MAS-GPT generalization results.">
-                    <figcaption>
-                        Generalization results for generated multi-agent systems across several benchmarks.
-                    </figcaption>
-                </figure>
-                <figure class="blog-figure">
-                    <img src="assets-web/image9.jpg" alt="MAS-GPT efficiency results.">
-                    <figcaption>
-                        Efficiency gains from more structured and reusable agent collaboration.
-                    </figcaption>
-                </figure>
+                <div class="blog-figure-grid">
+                    <figure class="blog-figure">
+                        <img src="assets-web/image8.jpg" alt="MAS-GPT generalization results.">
+                        <figcaption>
+                            Generalization results for generated multi-agent systems across several benchmarks.
+                        </figcaption>
+                    </figure>
+                    <figure class="blog-figure">
+                        <img src="assets-web/image9.jpg" alt="MAS-GPT efficiency results.">
+                        <figcaption>
+                            Efficiency gains from more structured and reusable agent collaboration.
+                        </figcaption>
+                    </figure>
+                </div>
 
                 <h2>Direction 2: Training One Agent Inside MAS</h2>
                 <p>
@@ -186,7 +189,7 @@
                     reasoning depth. Complex information-seeking may require hundreds of tool calls across many pages
                     or sources. This quickly overloads the context and breaks memory and control stability.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure compact">
                     <img src="assets-web/image10.jpg" alt="BrowseMaster overview.">
                     <figcaption>
                         BrowseMaster is designed for tool-heavy, search-intensive environments where one agent is not
@@ -203,7 +206,7 @@
                     Reference:
                     <a href="https://arxiv.org/pdf/2508.09129" target="_blank" rel="noopener noreferrer">BrowseMaster: Towards Scalable Web Browsing via Tool-Augmented Programmatic Agent Pair</a>.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure compact">
                     <img src="assets-web/image11.jpg" alt="BrowseMaster framework.">
                     <figcaption>
                         The planner-executor framework gives search behavior a programmatic, reusable structure.
@@ -219,28 +222,36 @@
                     learns strong programmatic search behavior, it can be inserted back into the MAS and work together
                     with the planner in a stronger closed loop.
                 </p>
-                <figure class="blog-figure">
+                <p>
+                    The experimental section has three parts. First, the main result shows end-task performance.
+                    Then an ablation isolates why planner-executor collaboration matters. Finally, two scaling plots
+                    explain how BrowseMaster behaves as search depth and tool usage grow.
+                </p>
+                <figure class="blog-figure compact">
                     <img src="assets-web/image12.jpg" alt="BrowseMaster overall performance.">
                     <figcaption>
-                        Training the executor improves overall performance on realistic browsing tasks.
+                        Main performance result: training the executor improves the full system on realistic browsing tasks.
                     </figcaption>
                 </figure>
-                <figure class="blog-figure">
-                    <img src="assets-web/image13.jpg" alt="BrowseMaster collaboration ablation.">
-                    <figcaption>
-                        An ablation showing why collaboration between planner and executor is necessary.
-                    </figcaption>
-                </figure>
-                <figure class="blog-figure">
-                    <img src="assets-web/image14.jpg" alt="BrowseMaster scaling with search calls.">
-                    <figcaption>
-                        BrowseMaster remains competitive as the number of search calls scales up.
-                    </figcaption>
-                </figure>
-                <figure class="blog-figure">
+                <div class="blog-figure-grid">
+                    <figure class="blog-figure">
+                        <img src="assets-web/image13.jpg" alt="BrowseMaster collaboration ablation.">
+                        <figcaption>
+                            Collaboration ablation: the strongest result appears when both executor primitives and planner
+                            coordination are enabled.
+                        </figcaption>
+                    </figure>
+                    <figure class="blog-figure">
+                        <img src="assets-web/image14.jpg" alt="BrowseMaster scaling with search calls.">
+                        <figcaption>
+                            Search scaling: BrowseMaster stays strong even as the number of search calls increases.
+                        </figcaption>
+                    </figure>
+                </div>
+                <figure class="blog-figure narrow">
                     <img src="assets-web/image15.jpg" alt="BrowseMaster scaling with tool usage.">
                     <figcaption>
-                        Structured execution also scales much better in total tool usage than prompt-only baselines.
+                        Tool scaling: structured execution keeps total tool usage far more controlled than prompt-only baselines.
                     </figcaption>
                 </figure>
 
@@ -257,7 +268,7 @@
                     Related paper:
                     <a href="https://arxiv.org/pdf/2505.16975" target="_blank" rel="noopener noreferrer">SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development</a>.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure narrow">
                     <img src="assets-web/image16.jpg" alt="Motivation for co-evolving agents.">
                     <figcaption>
                         The goal is to keep useful interaction experience instead of discarding it after inference.
@@ -270,13 +281,13 @@
                     trajectories are collected, successful planner traces and successful coder traces can be separately
                     fine-tuned.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure compact">
                     <img src="assets-web/image17.jpg" alt="Planner-coder training framework.">
                     <figcaption>
                         A planner-coder simplification makes multi-agent training easier to analyze and optimize.
                     </figcaption>
                 </figure>
-                <figure class="blog-figure">
+                <figure class="blog-figure compact">
                     <img src="assets-web/image18.jpg" alt="Textual and gradient backpropagation.">
                     <figcaption>
                         Textual backpropagation during interaction is combined with gradient updates over successful
@@ -288,7 +299,7 @@
                     agents change behavior, the data distribution shifts. New supervision is no longer perfectly
                     aligned with the old parameter state, and repeated SFT can easily become unstable or contradictory.
                 </p>
-                <figure class="blog-figure">
+                <figure class="blog-figure compact">
                     <img src="assets-web/image19.jpg" alt="Single-round training results.">
                     <figcaption>
                         Single-round training already yields meaningful gains on software engineering tasks.
@@ -297,38 +308,43 @@
                 <p>
                     This is why reinforcement learning becomes attractive. Instead of repeatedly forcing the model onto
                     changing supervised trajectories, RL may offer a more natural way to optimize collaboration over
-                    multiple iterations.
+                    multiple iterations. The next figures separate three messages: multi-round SFT instability, RL as
+                    an alternative training framework, and the remaining coordination gap in the final metrics.
                 </p>
-                <figure class="blog-figure">
-                    <img src="assets-web/image20.jpg" alt="Multi-round training instability.">
-                    <figcaption>
-                        Continued and restarted multi-round SFT both run into severe distribution shift.
-                    </figcaption>
-                </figure>
-                <figure class="blog-figure">
-                    <img src="assets-web/image21.jpg" alt="Alternating training order analysis.">
-                    <figcaption>
-                        Alternating the order of planner and coder training does not fully resolve the instability.
-                    </figcaption>
-                </figure>
-                <figure class="blog-figure">
+                <div class="blog-figure-grid">
+                    <figure class="blog-figure">
+                        <img src="assets-web/image20.jpg" alt="Multi-round training instability.">
+                        <figcaption>
+                            Multi-round SFT instability: both continued and restarted training suffer from distribution shift.
+                        </figcaption>
+                    </figure>
+                    <figure class="blog-figure">
+                        <img src="assets-web/image21.jpg" alt="Alternating training order analysis.">
+                        <figcaption>
+                            Alternating planner and coder updates changes the outcome, but does not remove instability.
+                        </figcaption>
+                    </figure>
+                </div>
+                <figure class="blog-figure narrow">
                     <img src="assets-web/image22.jpg" alt="RL training framework with coder and verifier.">
                     <figcaption>
-                        A verifier-mediated RL framework is one promising route for optimizing collaboration.
+                        RL setup: a verifier-mediated framework provides a clearer optimization target for collaboration.
                     </figcaption>
                 </figure>
-                <figure class="blog-figure">
-                    <img src="assets-web/image23.jpg" alt="RL training result table.">
-                    <figcaption>
-                        Early RL results show that some metrics improve, while coordination remains a bottleneck.
-                    </figcaption>
-                </figure>
-                <figure class="blog-figure">
-                    <img src="assets-web/image24.jpg" alt="RL comparison curves.">
-                    <figcaption>
-                        Comparing MASRL and CURE makes the coordination tradeoff more explicit.
-                    </figcaption>
-                </figure>
+                <div class="blog-figure-grid">
+                    <figure class="blog-figure">
+                        <img src="assets-web/image23.jpg" alt="RL training result table.">
+                        <figcaption>
+                            Result table: some evaluation metrics improve with RL, but not all forms of coordination improve equally.
+                        </figcaption>
+                    </figure>
+                    <figure class="blog-figure">
+                        <img src="assets-web/image24.jpg" alt="RL comparison curves.">
+                        <figcaption>
+                            Curve view: MASRL versus CURE makes the collaboration bottleneck easier to see than a table alone.
+                        </figcaption>
+                    </figure>
+                </div>
 
                 <h2>What Makes MAS Training Hard</h2>
                 <p>
