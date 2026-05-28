@@ -53,6 +53,13 @@
                     reasoning, another on execution, and another on verification. As single-agent models improve, the
                     ceiling of the overall system also rises.
                 </p>
+                <figure class="blog-figure">
+                    <img src="assets/mas-architectures.jpg" alt="Comparison of single-agent, network, and supervisor multi-agent architectures.">
+                    <figcaption>
+                        Three common paradigms for organizing agents: single-agent execution, networked collaboration,
+                        and supervisor-style coordination.
+                    </figcaption>
+                </figure>
 
                 <h2>Why MAS Training Matters</h2>
                 <p>
@@ -112,6 +119,13 @@
                     The final training unit becomes a triplet of <code>(query, reasoning, refined MAS)</code>. This
                     turns “designing MAS” itself into a learnable generation problem.
                 </p>
+                <figure class="blog-figure">
+                    <img src="assets/mas-gpt-pipeline.jpg" alt="Overview of the MAS-GPT pipeline for building, filtering, and training multi-agent systems.">
+                    <figcaption>
+                        The MAS-GPT pipeline turns multi-agent system design into a trainable generation problem by
+                        constructing, scoring, filtering, and refining query-MAS pairs.
+                    </figcaption>
+                </figure>
 
                 <h2>Direction 2: Training One Agent Inside MAS</h2>
                 <p>
@@ -139,6 +153,13 @@
                     learns strong programmatic search behavior, it can be inserted back into the MAS and work together
                     with the planner in a stronger closed loop.
                 </p>
+                <figure class="blog-figure">
+                    <img src="assets/browsemaster-framework.jpg" alt="BrowseMaster planner-executor framework for scalable information seeking.">
+                    <figcaption>
+                        BrowseMaster separates planning from programmatic execution, which makes long-horizon,
+                        search-heavy workflows more stable and scalable.
+                    </figcaption>
+                </figure>
 
                 <h2>Direction 3: Training All Agents for Co-Evolution</h2>
                 <p>
