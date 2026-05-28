@@ -22,7 +22,7 @@
     <main>
         <section class="section">
             <div class="container blog-post">
-                <p class="blog-meta">May 2026</p>
+                <p class="blog-meta">Talk Notes · TikTok AIIC Innovation Center · 2025/10/15</p>
                 <h1>Training Multi-Agent Systems: From MAS Generators to Co-Evolving Agents</h1>
                 <p>
                     Multi-agent systems (MAS) have become an increasingly practical way to tackle complex tasks that
@@ -34,6 +34,11 @@
                     In this post, I want to share a simple view of how I think about training MAS. My focus is not
                     just on how to design an agent workflow, but on how to make multi-agent collaboration itself
                     learnable.
+                </p>
+                <p>
+                    This post is adapted from a research sharing I gave at <strong>TikTok AIIC Innovation Center</strong>
+                    on <strong>October 15, 2025</strong>. I keep the structure close to the original talk, while adding
+                    paper references for the main examples discussed below.
                 </p>
 
                 <h2>Why Multi-Agent Systems Matter</h2>
@@ -113,6 +118,10 @@
                     parameterized, interactions can be represented through structured variable passing, and iterative
                     collaboration can be naturally modeled through loops.
                 </p>
+                <p>
+                    Reference:
+                    <a href="https://arxiv.org/pdf/2503.03686" target="_blank" rel="noopener noreferrer">MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems</a>.
+                </p>
                 <figure class="blog-figure">
                     <img src="assets-web/image4.jpg" alt="MAS-GPT overview.">
                     <figcaption>
@@ -190,6 +199,10 @@
                     prompt-driven: it uses code-like representations and structured functions such as keyword
                     generation, batch search, and result checking.
                 </p>
+                <p>
+                    Reference:
+                    <a href="https://arxiv.org/pdf/2508.09129" target="_blank" rel="noopener noreferrer">BrowseMaster: Towards Scalable Web Browsing via Tool-Augmented Programmatic Agent Pair</a>.
+                </p>
                 <figure class="blog-figure">
                     <img src="assets-web/image11.jpg" alt="BrowseMaster framework.">
                     <figcaption>
@@ -239,6 +252,10 @@
                     A motivating example comes from software engineering tasks, where MAS can iteratively improve
                     through interaction with execution environments and test feedback. This raises a natural question:
                     can the experience gained during interaction be preserved in the model itself?
+                </p>
+                <p>
+                    Related paper:
+                    <a href="https://arxiv.org/pdf/2505.16975" target="_blank" rel="noopener noreferrer">SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development</a>.
                 </p>
                 <figure class="blog-figure">
                     <img src="assets-web/image16.jpg" alt="Motivation for co-evolving agents.">
