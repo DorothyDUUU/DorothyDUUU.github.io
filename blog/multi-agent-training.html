@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Multi-Agent Systems - Yaxin Du</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#news">News</a></li>
+                <li><a href="../index.html#publications">Publications</a></li>
+                <li><a href="../index.html#experience">Research Experience</a></li>
+                <li><a href="../index.html#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container blog-post">
+                <p class="blog-meta">May 2026</p>
+                <h1>Training Multi-Agent Systems: From MAS Generators to Co-Evolving Agents</h1>
+                <p>
+                    Multi-agent systems (MAS) have become an increasingly practical way to tackle complex tasks that
+                    are difficult for a single model to solve reliably. In research, long-horizon reasoning, and
+                    open-ended product workflows, we are already seeing systems where multiple agents divide roles,
+                    exchange feedback, and iteratively improve results.
+                </p>
+                <p>
+                    In this post, I want to share a simple view of how I think about training MAS. My focus is not
+                    just on how to design an agent workflow, but on how to make multi-agent collaboration itself
+                    learnable.
+                </p>
+
+                <h2>Why Multi-Agent Systems Matter</h2>
+                <p>
+                    A multi-agent system is a collaborative system composed of multiple agents, each with its own
+                    decision-making and execution ability. Agents can communicate, collaborate, compete, or play
+                    complementary roles to solve problems that are hard to handle within a single context window.
+                </p>
+                <p>
+                    The motivation is straightforward. Even though large language models already have strong general
+                    capabilities, they still struggle in open and dynamic environments. Long tasks quickly stress
+                    context length, memory management, tool feedback accumulation, and control stability. A single
+                    model may be forced to handle planning, execution, verification, and recovery all at once.
+                </p>
+                <p>
+                    MAS helps because it allows us to isolate contexts and roles. One agent can focus on high-level
+                    reasoning, another on execution, and another on verification. As single-agent models improve, the
+                    ceiling of the overall system also rises.
+                </p>
+
+                <h2>Why MAS Training Matters</h2>
+                <p>
+                    Most current MAS pipelines are still manually designed. Developers define roles, prompts,
+                    communication protocols, and execution order by hand. This can work, but it leads to static
+                    collaboration: once task distributions or feedback mechanisms change, the whole system often needs
+                    to be redesigned.
+                </p>
+                <p>
+                    MAS training asks a harder but more interesting question: can we turn successful collaboration
+                    trajectories into model parameters? In other words, can a system learn to collaborate, adapt, and
+                    evolve, instead of repeatedly relying on test-time trial and error?
+                </p>
+                <p>
+                    My working view is that the real challenge is no longer just how to build MAS, but how to make MAS
+                    itself trainable.
+                </p>
+
+                <h2>Three Directions for MAS Training</h2>
+                <p>
+                    I find it helpful to organize the problem into three directions:
+                </p>
+                <p>
+                    <strong>1. Training an MAS generator.</strong> Given a task, can a model automatically generate a
+                    multi-agent system rather than requiring humans to build one?
+                </p>
+                <p>
+                    <strong>2. Training one critical component.</strong> If the architecture is fixed, can we train
+                    the most important agent to make the overall system stronger and more controllable?
+                </p>
+                <p>
+                    <strong>3. Training all agents for co-evolution.</strong> Can multiple agents improve together in a
+                    stable way, rather than each one optimizing in isolation?
+                </p>
+
+                <h2>Direction 1: Training an MAS Generator</h2>
+                <p>
+                    The first direction starts from a simple observation: today, most MAS pipelines are manually built.
+                    Systems such as Self-Refine, MetaGPT, and AutoGen depend heavily on human-written roles, prompts,
+                    and communication designs. If humans can “handcraft” MAS, perhaps a model can learn to do the same.
+                </p>
+                <p>
+                    This is the motivation behind <strong>MAS-GPT</strong>. The key idea is to represent a multi-agent
+                    system as code. This provides a compact and expressive search space where agent profiles can be
+                    parameterized, interactions can be represented through structured variable passing, and iterative
+                    collaboration can be naturally modeled through loops.
+                </p>
+                <p>
+                    To construct training data, we first collected a pool of manually designed MAS instances and paired
+                    them with queries from several datasets such as MATH, GSM8K, MBPP, MMLU, and SciQ. We then scored
+                    query-MAS pairs through execution and evaluation. After that, we performed two types of filtering:
+                    inter-consistency, which encourages similar queries to map to similar architectures, and
+                    intra-consistency, which refines a given MAS so that its roles and logic better match a specific
+                    query.
+                </p>
+                <p>
+                    The final training unit becomes a triplet of <code>(query, reasoning, refined MAS)</code>. This
+                    turns “designing MAS” itself into a learnable generation problem.
+                </p>
+
+                <h2>Direction 2: Training One Agent Inside MAS</h2>
+                <p>
+                    The second direction focuses on training a key component after the overall architecture has been
+                    decided. A good example is <strong>BrowseMaster</strong>.
+                </p>
+                <p>
+                    In realistic search-heavy tasks, a single agent often struggles to maintain both search breadth and
+                    reasoning depth. Complex information-seeking may require hundreds of tool calls across many pages
+                    or sources. This quickly overloads the context and breaks memory and control stability.
+                </p>
+                <p>
+                    BrowseMaster addresses this by separating reasoning from execution. A planner handles high-level
+                    decisions, while an executor interacts with tools and collects evidence. The executor is not purely
+                    prompt-driven: it uses code-like representations and structured functions such as keyword
+                    generation, batch search, and result checking.
+                </p>
+                <p>
+                    This gives two major benefits. First, it reduces redundancy, since reusable functions replace
+                    repeated low-level prompting. Second, it greatly improves flexibility and search scalability, since
+                    functions can be composed and nested programmatically.
+                </p>
+                <p>
+                    The training insight here is that the executor can be optimized as its own unit. Once the executor
+                    learns strong programmatic search behavior, it can be inserted back into the MAS and work together
+                    with the planner in a stronger closed loop.
+                </p>
+
+                <h2>Direction 3: Training All Agents for Co-Evolution</h2>
+                <p>
+                    The third direction is the most ambitious one: training all agents so they can co-evolve.
+                </p>
+                <p>
+                    A motivating example comes from software engineering tasks, where MAS can iteratively improve
+                    through interaction with execution environments and test feedback. This raises a natural question:
+                    can the experience gained during interaction be preserved in the model itself?
+                </p>
+                <p>
+                    One practical setup is to simplify the system into a planner-coder structure. The planner assigns
+                    subtasks, coders generate candidate code, and execution feedback is passed back into the system.
+                    We can view this as a kind of textual backpropagation at the interaction level. Then, after enough
+                    trajectories are collected, successful planner traces and successful coder traces can be separately
+                    fine-tuned.
+                </p>
+                <p>
+                    Single-round training often helps. But multi-round training turns out to be much harder. Once
+                    agents change behavior, the data distribution shifts. New supervision is no longer perfectly
+                    aligned with the old parameter state, and repeated SFT can easily become unstable or contradictory.
+                </p>
+                <p>
+                    This is why reinforcement learning becomes attractive. Instead of repeatedly forcing the model onto
+                    changing supervised trajectories, RL may offer a more natural way to optimize collaboration over
+                    multiple iterations.
+                </p>
+
+                <h2>What Makes MAS Training Hard</h2>
+                <p>
+                    In my view, the central difficulty of MAS training is not just optimization. It is attribution.
+                </p>
+                <p>
+                    In a multi-agent pipeline, the final reward is often clear, but assigning credit to the right agent
+                    is not. A planner may receive a clean success or failure signal, while a worker only handles
+                    subtasks whose contribution is indirect. This makes credit assignment especially difficult.
+                </p>
+                <p>
+                    Another challenge is that many agent trajectories are noisy. A large fraction of intermediate steps
+                    can be redundant, inefficient, or simply wrong. Filtering and evaluating trajectories therefore
+                    becomes as important as the training algorithm itself.
+                </p>
+                <p>
+                    Finally, reward alignment across agents matters. If the system is not carefully designed, different
+                    agents may optimize local goals and stop collaborating effectively. This is a familiar problem in
+                    multi-agent reinforcement learning, and it remains equally important for LLM-based MAS.
+                </p>
+
+                <h2>Open Questions I Care About</h2>
+                <p>
+                    Several questions feel especially important to me right now:
+                </p>
+                <p>
+                    How should we assign credit to different agents in long interaction traces? What kinds of tasks
+                    truly require multi-agent collaboration rather than just a stronger single agent? Is MAS training
+                    best framed as direct supervision, multi-step self-improvement, or reinforcement learning? And how
+                    should we design rewards so that agents optimize for collaboration rather than isolated behavior?
+                </p>
+                <p>
+                    There is also a deeper dilemma: if a task can already be solved well by a single agent, then MAS
+                    may be unnecessary. But if a task truly benefits from MAS, it is often exactly the kind of task
+                    that is difficult to train in a stable way.
+                </p>
+
+                <h2>Closing Thoughts</h2>
+                <p>
+                    Compared with single-agent systems, multi-agent systems are more naturally tied to iteration,
+                    decomposition, and co-evolution. That is what makes them exciting, but also what makes them hard.
+                </p>
+                <p>
+                    My current takeaway is simple: designing MAS is not enough. If we want robust, adaptive, and
+                    scalable multi-agent systems, we need to understand how to train collaboration itself.
+                </p>
+                <p>
+                    If you are interested in repo-level coding, tool use, or multi-agent training, I would be very
+                    happy to discuss.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Yaxin Du. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

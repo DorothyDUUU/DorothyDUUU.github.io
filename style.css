@@ -325,6 +325,73 @@ nav a:hover {
     content: 'Hide';
 }
 
+.blog-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.2rem 1.3rem;
+    box-shadow: var(--shadow);
+}
+
+.blog-card h3,
+.blog-post h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.65rem;
+}
+
+.blog-meta {
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.45rem;
+}
+
+.blog-summary {
+    color: var(--text-color);
+    font-size: 0.93rem;
+    line-height: 1.7;
+    margin-bottom: 0.9rem;
+}
+
+.blog-link {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.blog-link:hover {
+    text-decoration: underline;
+}
+
+.blog-post {
+    max-width: 860px;
+}
+
+.blog-post h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+.blog-post h2 {
+    display: block;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.blog-post p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 0.98rem;
+}
+
+.blog-post code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: rgba(135, 206, 235, 0.14);
+    padding: 0.1rem 0.35rem;
+    border-radius: 5px;
+}
+
 .experience-header {
     display: flex;
     flex-wrap: wrap;
