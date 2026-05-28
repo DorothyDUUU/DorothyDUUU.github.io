@@ -414,6 +414,17 @@ nav a:hover {
     line-height: 1.6;
 }
 
+.blog-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.blog-gallery .blog-figure {
+    margin: 0;
+}
+
 .experience-header {
     display: flex;
     flex-wrap: wrap;
