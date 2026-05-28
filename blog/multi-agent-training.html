@@ -318,26 +318,47 @@
                     an alternative training framework, and the remaining coordination gap in the final metrics.
                 </p>
                 <div class="blog-figure-group">
-                    <p class="blog-figure-group-title">Experimental Pair: Two Views of Multi-Round SFT Failure</p>
+                    <p class="blog-figure-group-title">Experimental Pair: Two SFT Views of Multi-Round Instability</p>
                     <div class="blog-figure-grid">
                         <figure class="blog-figure">
                             <img src="assets-web/image20.jpg" alt="Multi-round training instability.">
                             <figcaption>
-                                Left: continued and restarted multi-round SFT both suffer from distribution shift.
+                                Left: continued and restarted multi-round SFT both suffer from distribution shift after
+                                the agent is inserted back into the system and used to resample new trajectories.
                             </figcaption>
                         </figure>
                         <figure class="blog-figure">
                             <img src="assets-web/image21.jpg" alt="Alternating training order analysis.">
                             <figcaption>
-                                Right: alternating planner and coder updates changes the outcome, but does not remove instability.
+                                Right: this is still an SFT result. Alternating planner-only and coder-only updates changes
+                                the outcome, but does not remove the instability of multi-round supervised training.
                             </figcaption>
                         </figure>
                     </div>
                 </div>
+                <p>
+                    For the RL setting, we follow the reward design used in
+                    <a href="https://arxiv.org/abs/2506.03136" target="_blank" rel="noopener noreferrer">CURE: Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning</a>.
+                    The basic idea is to give the coder a reward based on execution success, while the verifier or tester
+                    receives a reward based on whether its tests correctly separate good code from bad code.
+                </p>
+                <p>
+                    More concretely, if a sampled code solution is evaluated on a set of unit tests, the coder reward can
+                    be written as
+                    <code>R_coder = mean(pass(test_i, code))</code>,
+                    namely the average pass rate over the available tests, followed by reward normalization.
+                    For the verifier side, CURE first assigns a positive sign to a test if it accepts correct code and a
+                    negative sign otherwise, then rescales that signal according to how well the test rejects wrong code.
+                    In a compact form, this is
+                    <code>R_verifier = sign(test) x scale(test)</code>,
+                    again followed by normalization. In our setting, we use this same CURE-style idea as the starting point
+                    for the verifier reward.
+                </p>
                 <figure class="blog-figure narrow">
                     <img src="assets-web/image22.jpg" alt="RL training framework with coder and verifier.">
                     <figcaption>
-                        RL setup: a verifier-mediated framework provides a clearer optimization target for collaboration.
+                        RL setup: we optimize a coder-verifier system using a CURE-style reward design, where code is rewarded
+                        by execution success and tests are rewarded by how well they validate correct code while rejecting wrong code.
                     </figcaption>
                 </figure>
                 <div class="blog-figure-group">
