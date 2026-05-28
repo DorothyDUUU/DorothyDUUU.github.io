@@ -164,19 +164,22 @@
                     collaboration compared with hand-written pipelines. The next two figures should be read together:
                     the left one focuses on task generalization, while the right one focuses on efficiency.
                 </p>
-                <div class="blog-figure-grid">
-                    <figure class="blog-figure">
-                        <img src="assets-web/image8.jpg" alt="MAS-GPT generalization results.">
-                        <figcaption>
-                            Generalization results for generated multi-agent systems across several benchmarks.
-                        </figcaption>
-                    </figure>
-                    <figure class="blog-figure">
-                        <img src="assets-web/image9.jpg" alt="MAS-GPT efficiency results.">
-                        <figcaption>
-                            Efficiency gains from more structured and reusable agent collaboration.
-                        </figcaption>
-                    </figure>
+                <div class="blog-figure-group">
+                    <p class="blog-figure-group-title">Experimental Pair: Generalization vs. Efficiency</p>
+                    <div class="blog-figure-grid">
+                        <figure class="blog-figure">
+                            <img src="assets-web/image8.jpg" alt="MAS-GPT generalization results.">
+                            <figcaption>
+                                Left: generalization results for generated multi-agent systems across several benchmarks.
+                            </figcaption>
+                        </figure>
+                        <figure class="blog-figure">
+                            <img src="assets-web/image9.jpg" alt="MAS-GPT efficiency results.">
+                            <figcaption>
+                                Right: efficiency gains from more structured and reusable agent collaboration.
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
 
                 <h2>Direction 2: Training One Agent Inside MAS</h2>
@@ -233,20 +236,23 @@
                         Main performance result: training the executor improves the full system on realistic browsing tasks.
                     </figcaption>
                 </figure>
-                <div class="blog-figure-grid">
-                    <figure class="blog-figure">
-                        <img src="assets-web/image13.jpg" alt="BrowseMaster collaboration ablation.">
-                        <figcaption>
-                            Collaboration ablation: the strongest result appears when both executor primitives and planner
-                            coordination are enabled.
-                        </figcaption>
-                    </figure>
-                    <figure class="blog-figure">
-                        <img src="assets-web/image14.jpg" alt="BrowseMaster scaling with search calls.">
-                        <figcaption>
-                            Search scaling: BrowseMaster stays strong even as the number of search calls increases.
-                        </figcaption>
-                    </figure>
+                <div class="blog-figure-group">
+                    <p class="blog-figure-group-title">Experimental Pair: Ablation vs. Search Scaling</p>
+                    <div class="blog-figure-grid">
+                        <figure class="blog-figure">
+                            <img src="assets-web/image13.jpg" alt="BrowseMaster collaboration ablation.">
+                            <figcaption>
+                                Left: collaboration ablation. The strongest result appears when both executor primitives
+                                and planner coordination are enabled.
+                            </figcaption>
+                        </figure>
+                        <figure class="blog-figure">
+                            <img src="assets-web/image14.jpg" alt="BrowseMaster scaling with search calls.">
+                            <figcaption>
+                                Right: search scaling. BrowseMaster stays strong even as the number of search calls increases.
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
                 <figure class="blog-figure narrow">
                     <img src="assets-web/image15.jpg" alt="BrowseMaster scaling with tool usage.">
@@ -311,19 +317,22 @@
                     multiple iterations. The next figures separate three messages: multi-round SFT instability, RL as
                     an alternative training framework, and the remaining coordination gap in the final metrics.
                 </p>
-                <div class="blog-figure-grid">
-                    <figure class="blog-figure">
-                        <img src="assets-web/image20.jpg" alt="Multi-round training instability.">
-                        <figcaption>
-                            Multi-round SFT instability: both continued and restarted training suffer from distribution shift.
-                        </figcaption>
-                    </figure>
-                    <figure class="blog-figure">
-                        <img src="assets-web/image21.jpg" alt="Alternating training order analysis.">
-                        <figcaption>
-                            Alternating planner and coder updates changes the outcome, but does not remove instability.
-                        </figcaption>
-                    </figure>
+                <div class="blog-figure-group">
+                    <p class="blog-figure-group-title">Experimental Pair: Two Views of Multi-Round SFT Failure</p>
+                    <div class="blog-figure-grid">
+                        <figure class="blog-figure">
+                            <img src="assets-web/image20.jpg" alt="Multi-round training instability.">
+                            <figcaption>
+                                Left: continued and restarted multi-round SFT both suffer from distribution shift.
+                            </figcaption>
+                        </figure>
+                        <figure class="blog-figure">
+                            <img src="assets-web/image21.jpg" alt="Alternating training order analysis.">
+                            <figcaption>
+                                Right: alternating planner and coder updates changes the outcome, but does not remove instability.
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
                 <figure class="blog-figure narrow">
                     <img src="assets-web/image22.jpg" alt="RL training framework with coder and verifier.">
@@ -331,19 +340,22 @@
                         RL setup: a verifier-mediated framework provides a clearer optimization target for collaboration.
                     </figcaption>
                 </figure>
-                <div class="blog-figure-grid">
-                    <figure class="blog-figure">
-                        <img src="assets-web/image23.jpg" alt="RL training result table.">
-                        <figcaption>
-                            Result table: some evaluation metrics improve with RL, but not all forms of coordination improve equally.
-                        </figcaption>
-                    </figure>
-                    <figure class="blog-figure">
-                        <img src="assets-web/image24.jpg" alt="RL comparison curves.">
-                        <figcaption>
-                            Curve view: MASRL versus CURE makes the collaboration bottleneck easier to see than a table alone.
-                        </figcaption>
-                    </figure>
+                <div class="blog-figure-group">
+                    <p class="blog-figure-group-title">Experimental Pair: RL Result Table vs. RL Trend Curves</p>
+                    <div class="blog-figure-grid">
+                        <figure class="blog-figure">
+                            <img src="assets-web/image23.jpg" alt="RL training result table.">
+                            <figcaption>
+                                Left: result table. Some evaluation metrics improve with RL, but not all forms of coordination improve equally.
+                            </figcaption>
+                        </figure>
+                        <figure class="blog-figure">
+                            <img src="assets-web/image24.jpg" alt="RL comparison curves.">
+                            <figcaption>
+                                Right: trend curves. MASRL versus CURE makes the collaboration bottleneck easier to see than a table alone.
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
 
                 <h2>What Makes MAS Training Hard</h2>

@@ -415,13 +415,13 @@ nav a:hover {
 }
 
 .blog-figure.compact {
-    max-width: 640px;
+    max-width: 560px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .blog-figure.narrow {
-    max-width: 520px;
+    max-width: 420px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -431,10 +431,27 @@ nav a:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin: 1.1rem 0 1.7rem;
+    align-items: start;
 }
 
 .blog-figure-grid .blog-figure {
     margin: 0;
+}
+
+.blog-figure-group {
+    margin: 1.2rem 0 1.8rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.blog-figure-group-title {
+    margin: 0 0 0.8rem;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
 }
 
 .blog-note {
