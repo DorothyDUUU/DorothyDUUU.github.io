@@ -152,6 +152,43 @@ nav a:hover {
     border-radius: 8px;
 }
 
+.research-overview {
+    margin-bottom: 1.1rem;
+    padding: 1rem 1.05rem 0.95rem;
+    background: rgba(255, 255, 255, 0.66);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.research-overview h3 {
+    color: var(--primary-color);
+    font-size: 1.02rem;
+    margin-bottom: 0.65rem;
+}
+
+.research-overview p {
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+    font-size: 0.94rem;
+}
+
+.research-overview-list {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.research-overview-list li {
+    margin-bottom: 0.7rem;
+    line-height: 1.72;
+    font-size: 0.93rem;
+    color: var(--text-color);
+}
+
+.research-overview-list li:last-child {
+    margin-bottom: 0;
+}
+
 .social-links {
     display: flex;
     gap: 0.8rem;
