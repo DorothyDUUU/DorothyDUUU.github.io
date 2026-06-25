@@ -1,0 +1,25 @@
+<svg width="640" height="400" viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="400" rx="28" fill="#0F172A"/>
+  <rect x="28" y="28" width="584" height="344" rx="24" fill="url(#bg)"/>
+  <rect x="82" y="78" width="90" height="72" rx="16" fill="#ECFEFF"/>
+  <rect x="192" y="102" width="104" height="82" rx="16" fill="#E0F2FE"/>
+  <rect x="320" y="76" width="92" height="72" rx="16" fill="#DBEAFE"/>
+  <rect x="430" y="112" width="110" height="86" rx="16" fill="#EFF6FF"/>
+  <rect x="140" y="212" width="360" height="58" rx="20" fill="#082F49" fill-opacity="0.72"/>
+  <path d="M172 150L208 176" stroke="#A5F3FC" stroke-width="8" stroke-linecap="round"/>
+  <path d="M296 144L332 120" stroke="#7DD3FC" stroke-width="8" stroke-linecap="round"/>
+  <path d="M410 148L430 174" stroke="#93C5FD" stroke-width="8" stroke-linecap="round"/>
+  <text x="100" y="119" fill="#0F172A" font-family="Georgia, serif" font-size="18" font-weight="700">Source A</text>
+  <text x="212" y="137" fill="#0F172A" font-family="Georgia, serif" font-size="18" font-weight="700">Source B</text>
+  <text x="339" y="119" fill="#0F172A" font-family="Georgia, serif" font-size="18" font-weight="700">Source C</text>
+  <text x="455" y="151" fill="#0F172A" font-family="Georgia, serif" font-size="18" font-weight="700">Source D</text>
+  <text x="205" y="248" fill="#E0F2FE" font-family="Georgia, serif" font-size="24" font-weight="700">evidence integration benchmark</text>
+  <text x="72" y="314" fill="white" font-family="Georgia, serif" font-size="40" font-weight="700">InfoMosaic-Bench</text>
+  <text x="72" y="349" fill="#BFDBFE" font-family="Georgia, serif" font-size="22">Multi-Source Tool-Augmented Agents</text>
+  <defs>
+    <linearGradient id="bg" x1="28" y1="28" x2="612" y2="372" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#155E75"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+  </defs>
+</svg>

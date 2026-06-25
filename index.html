@@ -14,6 +14,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#news">News</a></li>
                 <li><a href="#publications">Publications</a></li>
+                <li><a href="#reports">Technical Reports</a></li>
                 <li><a href="#experience">Research Experience</a></li>
                 <li><a href="#blog">Blog</a></li>
             </ul>
@@ -23,63 +24,90 @@
     <main>
         <section id="about" class="section">
             <div class="container">
-                <div class="about-content">
-                    <div class="profile-image">
-                        <img src="profile.jpeg" alt="Yaxin Du">
-                    </div>
-                    <div class="profile-info">
-                        <h1>Yaxin Du</h1>
-                        <p class="title">PhD Student</p>
-                        <p class="affiliation">Shanghai Jiao Tong University</p>
-                        <p class="bio">
-                            I am a fourth-year direct-entry Ph.D. student at Shanghai Jiao Tong University, advised by Prof.
-                            <a href="https://siheng-chen.github.io/" target="_blank" rel="noopener noreferrer">Siheng Chen</a>.
-                            I am currently exploring job opportunities and would be happy to connect. Outside research,
-                            I enjoy meeting new people, food, travel, and discovering new things.
-                        </p>
-                        <div class="research-overview">
-                            <h3>Research Overview</h3>
-                            <p>
-                                My recent work centers on how language-model-based agents can operate reliably in
-                                realistic environments, improve through training, and be evaluated on open-ended tasks.
+                <div class="about-layout">
+                    <aside class="about-sidebar">
+                        <div class="about-profile-card">
+                            <div class="profile-image">
+                                <img src="profile.jpeg" alt="Yaxin Du">
+                            </div>
+                            <h1>Yaxin Du (杜雅欣)</h1>
+                            <p class="about-role">Fourth-year PhD Student</p>
+                            <p class="about-school">Shanghai Jiao Tong University</p>
+                            <p class="about-email">
+                                <a href="mailto:dorothydu@sjtu.edu.cn">dorothydu@sjtu.edu.cn</a>
                             </p>
-                            <ul class="research-overview-list">
-                                <li>
-                                    <strong>Tool Use and Environment Interaction.</strong> I study how agents interact
-                                    with tools and external environments, with recent work on MCP-based tool learning,
-                                    web browsing, and environment-grounded agent benchmarks.
-                                </li>
-                                <li>
-                                    <strong>Training Agents and Coding Models.</strong> I work on training strategies
-                                    for agentic and coding-oriented language models, including role-wise multi-agent
-                                    training, coder-verifier co-evolution, and mid-training for coding LLMs.
-                                </li>
-                                <li>
-                                    <strong>Evaluation in Open-Ended Tasks.</strong> I build benchmarks and data-centric
-                                    resources for studying how agents and coding models behave on realistic,
-                                    feedback-driven tasks.
-                                </li>
-                            </ul>
+                            <p class="about-status">Actively exploring research and engineering opportunities.</p>
+                            <div class="about-icon-links">
+                                <a href="mailto:dorothydu@sjtu.edu.cn" aria-label="Email" title="Email">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="https://scholar.google.com/citations?user=i_7WSl0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="https://github.com/DorothyDUUU" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/yaxin-du-44197320b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="files/Yaxin_Du_CV_2027.pdf" target="_blank" rel="noopener noreferrer" aria-label="CV" title="CV">
+                                    <i class="fas fa-file-pdf"></i>
+                                </a>
+                            </div>
+                            <p class="about-wechat">WeChat: dyx13219058049</p>
                         </div>
-                        <div class="social-links">
-                            <a href="mailto:dorothydu@sjtu.edu.cn">
-                                <i class="fas fa-envelope"></i> Email
-                            </a>
-                            <a href="https://scholar.google.com/citations?user=i_7WSl0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-graduation-cap"></i> Google Scholar
-                            </a>
-                            <a href="https://github.com/DorothyDUUU" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://www.linkedin.com/in/yaxin-du-44197320b/" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-linkedin"></i> LinkedIn
-                            </a>
-                            <a href="files/Yaxin_Du_CV_2027.pdf" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-file-pdf"></i> CV
-                            </a>
-                            <span class="social-wechat">
-                                <i class="fab fa-weixin"></i> WeChat: dyx13219058049
-                            </span>
+                    </aside>
+                    <div class="about-main">
+                        <div class="about-block">
+                            <h2>About Me</h2>
+                            <p class="bio">
+                                I am a fourth-year direct-entry Ph.D. student in Computer Science at Shanghai Jiao Tong
+                                University, advised by Prof.
+                                <a href="https://siheng-chen.github.io/" target="_blank" rel="noopener noreferrer">Siheng Chen</a>.
+                                I am currently looking for research and engineering opportunities, especially around foundation
+                                models and agent systems.
+                            </p>
+                            <p class="bio">
+                                Outside research, I enjoy meeting new people, food, travel, and all kinds of new experiences.
+                                If you are also working on agents, coding models, or open-ended evaluation, I would be happy
+                                to connect.
+                            </p>
+                        </div>
+                        <div class="about-block">
+                            <h2>Research Topics</h2>
+                            <p class="about-topic-intro">
+                                My recent work is organized around a few connected directions.
+                            </p>
+                            <div class="interest-chips">
+                                <span>LLM agents</span>
+                                <span>coding LLM</span>
+                                <span>federated learning</span>
+                            </div>
+                            <div class="research-topic-grid">
+                                <article class="research-topic-card">
+                                    <h3>Tool-Using Agents</h3>
+                                    <p>
+                                        I study how language-model agents interact with tools and external environments,
+                                        with recent work on MCP-based tool learning, web browsing, and environment-grounded
+                                        agent benchmarks.
+                                    </p>
+                                </article>
+                                <article class="research-topic-card">
+                                    <h3>Training Coding LLMs and MAS</h3>
+                                    <p>
+                                        I work on training strategies for agentic and coding-oriented language models,
+                                        including role-wise multi-agent training, coder-verifier co-evolution, and
+                                        mid-training for coding LLMs.
+                                    </p>
+                                </article>
+                                <article class="research-topic-card">
+                                    <h3>Open-Ended Evaluation</h3>
+                                    <p>
+                                        I build benchmarks and data-centric resources for studying how agents and coding
+                                        models behave on realistic, feedback-driven tasks such as software engineering.
+                                    </p>
+                                </article>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -89,166 +117,312 @@
         <section id="news" class="section">
             <div class="container">
                 <h2>News</h2>
-                <ul class="news-list">
-                    <li>
-                        <span class="news-date">Jun 2026</span>
-                        Released
-                        <a href="https://arxiv.org/pdf/2606.13663" target="_blank" rel="noopener noreferrer">HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents</a>.
-                    </li>
-                    <li>
-                        <span class="news-date">Jun 2026</span>
-                        Released
-                        <a href="https://arxiv.org/abs/2605.30288" target="_blank" rel="noopener noreferrer">MIRA: Mid-training Rubric Anchoring for Source-Aware Data Selection</a>.
-                    </li>
-                    <li>
-                        <span class="news-date">May 2026</span>
-                        Released
-                        <a href="https://arxiv.org/abs/2605.10906" target="_blank" rel="noopener noreferrer">DataMaster: Data-Centric Autonomous AI Research</a>.
-                    </li>
-                    <li>
-                        <span class="news-date">May 2026</span>
-                        Three papers were accepted to ICML 2026:
-                        <a href="https://arxiv.org/pdf/2601.22055" target="_blank" rel="noopener noreferrer">G2-Reader</a>,
-                        MCP-Persona, and
-                        <a href="https://arxiv.org/pdf/2511.07380" target="_blank" rel="noopener noreferrer">NTK-Selector</a>.
-                    </li>
-                    <li>
-                        <span class="news-date">Apr 2026</span>
-                        Two papers accepted to ACL 2026:
-                        <a href="https://arxiv.org/pdf/2510.24284" target="_blank" rel="noopener noreferrer">MCP-Flow</a>
-                        and
-                        <a href="https://arxiv.org/pdf/2504.12661" target="_blank" rel="noopener noreferrer">VLMGuard-R1</a>.
-                    </li>
-                    <li>
-                        <span class="news-date">Apr 2026</span>
-                        Released the InCoder paper series.
-                        <a href="https://huggingface.co/papers/2603.16790" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                    </li>
-                    <li>
-                        <span class="news-date">Feb 2026</span>
-                        Released
-                        <a href="https://arxiv.org/pdf/2601.22055" target="_blank" rel="noopener noreferrer">G²-Reader</a>.
-                    </li>
-                    <li>
-                        <span class="news-date">Jan 2026</span>
-                        Joined iQuest Lab, Ubiquant, as a Research Intern, working on foundation model training and coding LLM mid-training.
-                    </li>
-                    <li>
-                        <span class="news-date">Jan 2026</span>
-                        <a href="https://arxiv.org/pdf/2510.02271" target="_blank" rel="noopener noreferrer">InfoMosaicBench</a>
-                        was accepted to ICLR 2026.
-                    </li>
-                    <li>
-                        <span class="news-date">Dec 2025</span>
-                        Presented
-                        <a href="https://arxiv.org/pdf/2505.16975" target="_blank" rel="noopener noreferrer">SWE-Dev</a>
-                        at the NeurIPS 2025 Workshop.
-                    </li>
-                    <li>
-                        <span class="news-date">Sep 2025</span>
-                        Joined TikTok AI Innovation Center as a Research Intern, mentored by
-                        <a href="https://scholar.google.com/citations?user=bcbeUo0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Qian Liu</a>.
-                    </li>
-                </ul>
+                <div class="news-scroll">
+                    <ul class="news-list">
+                        <li>
+                            <span class="news-date">Jun 2026</span>
+                            Released
+                            <a href="https://arxiv.org/abs/2606.18023" target="_blank" rel="noopener noreferrer">LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">Jun 2026</span>
+                            Released
+                            <a href="https://arxiv.org/pdf/2606.13663" target="_blank" rel="noopener noreferrer">HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">Jun 2026</span>
+                            Released
+                            <a href="https://arxiv.org/pdf/2605.30288" target="_blank" rel="noopener noreferrer">MIRA: Mid-training Rubric Anchoring for Source-Aware Data Selection</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">May 2026</span>
+                            Released
+                            <a href="https://arxiv.org/pdf/2605.10906" target="_blank" rel="noopener noreferrer">DataMaster: Data-Centric Autonomous AI Research</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">May 2026</span>
+                            Three papers were accepted to ICML 2026:
+                            <a href="https://arxiv.org/pdf/2601.22055" target="_blank" rel="noopener noreferrer">G2-Reader</a>,
+                            MCP-Persona, and
+                            <a href="https://arxiv.org/pdf/2511.07380" target="_blank" rel="noopener noreferrer">NTK-Selector</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">Apr 2026</span>
+                            Two papers accepted to ACL 2026:
+                            <a href="https://arxiv.org/pdf/2510.24284" target="_blank" rel="noopener noreferrer">MCP-Flow</a>
+                            and
+                            <a href="https://arxiv.org/pdf/2504.12661" target="_blank" rel="noopener noreferrer">VLMGuard-R1</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">Apr 2026</span>
+                            Released the InCoder paper series.
+                            <a href="https://huggingface.co/papers/2603.16790" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                        </li>
+                        <li>
+                            <span class="news-date">Feb 2026</span>
+                            Released
+                            <a href="https://arxiv.org/pdf/2601.22055" target="_blank" rel="noopener noreferrer">G²-Reader</a>.
+                        </li>
+                        <li>
+                            <span class="news-date">Jan 2026</span>
+                            Joined iQuest Lab, Ubiquant, as a Research Intern, working on foundation model training and coding LLM mid-training.
+                        </li>
+                        <li>
+                            <span class="news-date">Jan 2026</span>
+                            <a href="https://arxiv.org/pdf/2510.02271" target="_blank" rel="noopener noreferrer">InfoMosaicBench</a>
+                            was accepted to ICLR 2026.
+                        </li>
+                        <li>
+                            <span class="news-date">Dec 2025</span>
+                            Presented
+                            <a href="https://arxiv.org/pdf/2505.16975" target="_blank" rel="noopener noreferrer">SWE-Dev</a>
+                            at the NeurIPS 2025 Workshop.
+                        </li>
+                        <li>
+                            <span class="news-date">Sep 2025</span>
+                            Joined TikTok AI Innovation Center as a Research Intern, mentored by
+                            <a href="https://scholar.google.com/citations?user=bcbeUo0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Qian Liu</a>.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="publications" class="section">
             <div class="container">
                 <h2>Publications</h2>
+                <p class="publication-lead">
+                    A few papers that best represent my recent work on agent systems, coding models, and open-ended evaluation.
+                </p>
 
                 <div class="publication-group">
                     <h3>Selected Publications</h3>
-                    <ul class="publications-list-simple">
-                        <li>
-                            <span class="venue">arXiv 2026</span> HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents<br>
-                            <span class="authors"><strong>Yaxin Du*</strong>, Yifan Zhou*, Yujie Ge, Jiajun Wang, Xianghe Pang, Shuo Tang, Tuney Zheng, Bryan Dai, Jian Yang, Siheng Chen</span><br>
-                            <span class="citation-note">arXiv preprint arXiv:2606.13663</span>
-                            <a href="https://arxiv.org/pdf/2606.13663" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">arXiv 2026</span> DataMaster: Data-Centric Autonomous AI Research<br>
-                            <span class="authors"><strong>Yaxin Du*</strong>, Xiyuan Yang*, Zhifan Zhou, Wanxu Liu, Zixing Lei, Zimeng Chen, Fenyi Liu, Haotian Wu, Yuzhu Cai, Zexi Liu, Xinyu Zhu, WenHao Wang, Linfeng Zhang, Chen Qian, Siheng Chen</span>
-                            <a href="https://arxiv.org/abs/2605.10906" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">ICLR 2026</span> InfoMosaic-Bench: Evaluating Multi-Source Information Seeking in Tool-Augmented Agents<br>
-                            <span class="authors"><strong>Yaxin Du</strong>, Yuanshuo Zhang, Xiyuan Yang, Yifan Zhou, Cheng Wang, Gongyi Zou, Xianghe Pang, Wenhao Wang, et al.</span><br>
-                            <span class="citation-note">arXiv preprint arXiv:2510.02271</span>
-                            <a href="https://arxiv.org/pdf/2510.02271" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">ICML 2026</span> G2-Reader: Dual Evolving Graphs for Multimodal Document QA<br>
-                            <span class="authors"><strong>Yaxin Du*</strong>, Junru Song*, Yifan Zhou*, Cheng Wang, Jiahao Gu, Zimeng Chen, Menglan Chen, Wen Yao, Yang Yang, Ying Wen, Siheng Chen</span>
-                            <a href="https://arxiv.org/pdf/2601.22055" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">arXiv 2025</span> SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development<br>
-                            <span class="authors"><strong>Yaxin Du*</strong>, Yuzhu Cai*, Yifan Zhou, Cheng Wang, Yu Qian, Xianghe Pang, Qian Liu, Yue Hu, Siheng Chen</span><br>
-                            <span class="citation-note">NeurIPS 2025 DL4C Workshop</span>
-                            <a href="https://arxiv.org/pdf/2505.16975" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                            <a href="https://github.com/DorothyDUUU/SWE-Dev" target="_blank" rel="noopener noreferrer">[Code]</a>
-                        </li>
-                        <li>
-                            <span class="venue">ACL 2025 Findings</span> FedDQC: Data Quality Control in Federated Instruction-tuning of Large Language Models<br>
-                            <span class="authors"><strong>Yaxin Du</strong>, Rui Ye, Fengting Yuchi, Wanru Zhao, Jingjing Qu, Yanfeng Wang, Siheng Chen</span>
-                            <a href="https://aclanthology.org/2025.findings-acl.791.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">ICLR 2024 Workshop</span> Enhancing Data Quality in Federated Fine-tuning of Large Language Models<br>
-                            <span class="authors">Wanru Zhao*, <strong>Yaxin Du*</strong>, Nicholas Donald Lane, Siheng Chen, Yanfeng Wang</span>
-                            <a href="https://arxiv.org/pdf/2403.04529" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">ICML 2026</span> NTK-Selector: Selecting Auxiliary Data via Neural Tangent Kernels for Low-Resource Domains<br>
-                            <span class="authors">Pingjie Wang, Hongcheng Liu, Yusheng Liao, Ziqing Fan, <strong>Yaxin Du</strong>, Shuo Tang, Yanfeng Wang, Yu Wang</span>
-                            <a href="https://arxiv.org/pdf/2511.07380" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">ICLR 2025</span> Self-evolving Multi-agent Collaboration Networks for Software Development<br>
-                            <span class="authors">Yue Hu, Yuzhu Cai, <strong>Yaxin Du</strong>, Xinyu Zhu, Xiangrui Liu, Zijie Yu, Yuchen Hou, Shuo Tang, Siheng Chen</span>
-                        </li>
-                        <li>
-                            <span class="venue">arXiv 2025</span> MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems<br>
-                            <span class="authors">Rui Ye, Shuo Tang, Rui Ge, <strong>Yaxin Du</strong>, Zhenfei Yin, Siheng Chen, Jing Shao</span>
-                            <a href="https://arxiv.org/abs/2503.03686" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">KDD 2024</span> OpenFedLLM: Training Large Language Models on Decentralized Private Data via Federated Learning<br>
-                            <span class="authors">Rui Ye, Wenhao Wang, Jingyi Chai, Dihan Li, Zexi Li, Yinda Xu, <strong>Yaxin Du</strong>, Yanfeng Wang, Siheng Chen</span>
-                            <a href="https://dl.acm.org/doi/pdf/10.1145/3637528.3671582" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">NeurIPS 2024</span> FedLLM-Bench: Realistic Benchmarks for Federated Learning of Large Language Models<br>
-                            <span class="authors">Rui Ye, Rui Ge, Xinyu Zhu, Jingyi Chai, <strong>Yaxin Du</strong>, Yang Liu, Yanfeng Wang, Siheng Chen</span>
-                            <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/c8cdab0e890c59255c27977072fdb0f0-Paper-Datasets_and_Benchmarks_Track.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                        <li>
-                            <span class="venue">ICLR 2024</span> Fake It Till Make It: Federated Learning with Consensus-Oriented Generation<br>
-                            <span class="authors">Rui Ye, <strong>Yaxin Du</strong>, Zhenyang Ni, Siheng Chen, Yanfeng Wang</span>
-                            <a href="https://arxiv.org/pdf/2312.05966" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                        </li>
-                    </ul>
+                    <div class="featured-publications">
+                        <article class="featured-paper">
+                            <div class="featured-paper-media">
+                                <img src="assets/publications/mira.png" alt="MIRA main figure">
+                                <span class="featured-paper-tag">ArXiv</span>
+                            </div>
+                            <div class="featured-paper-body">
+                                <h4>MIRA: Mid-training Rubric Anchoring for Source-Aware Data Selection</h4>
+                                <p class="featured-paper-authors">Haowen Wang*, <strong>Yaxin Du*</strong>, Jian Yang, Jiajun Wu, Shukai Liu, Yuanshuo Zhang, Pingjie Wang, Siheng Chen, Tuney Zheng, Ming Zhou, Xianglong Liu, Bryan Dai</p>
+                                <p class="featured-paper-note">arXiv preprint</p>
+                                <p class="featured-paper-summary">A recent study on rubric-anchored mid-training and source-aware data selection for coding and foundation model training.</p>
+                                <div class="featured-paper-links">
+                                    <a href="https://arxiv.org/pdf/2605.30288" target="_blank" rel="noopener noreferrer">PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="featured-paper">
+                            <div class="featured-paper-media">
+                                <img src="assets/publications/hypertool.png" alt="HyperTool main figure">
+                                <span class="featured-paper-tag">ArXiv</span>
+                            </div>
+                            <div class="featured-paper-body">
+                                <h4>HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents</h4>
+                                <p class="featured-paper-authors"><strong>Yaxin Du*</strong>, Yifan Zhou*, Yujie Ge, Jiajun Wang, Xianghe Pang, Shuo Tang, Tuney Zheng, Bryan Dai, Jian Yang, Siheng Chen</p>
+                                <p class="featured-paper-note">arXiv preprint</p>
+                                <p class="featured-paper-summary">A recent agent paper on moving beyond step-wise tool calling toward more structured and flexible tool use.</p>
+                                <div class="featured-paper-links">
+                                    <a href="https://arxiv.org/pdf/2606.13663" target="_blank" rel="noopener noreferrer">PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="featured-paper">
+                            <div class="featured-paper-media">
+                                <img src="assets/publications/datamaster.png" alt="DataMaster main figure">
+                                <span class="featured-paper-tag">ArXiv</span>
+                            </div>
+                            <div class="featured-paper-body">
+                                <h4>DataMaster: Data-Centric Autonomous AI Research</h4>
+                                <p class="featured-paper-authors"><strong>Yaxin Du*</strong>, Xiyuan Yang*, Zhifan Zhou, Wanxu Liu, Zixing Lei, Zimeng Chen, Fenyi Liu, Haotian Wu, Yuzhu Cai, Zexi Liu, Xinyu Zhu, WenHao Wang, Linfeng Zhang, Chen Qian, Siheng Chen</p>
+                                <p class="featured-paper-note">arXiv preprint</p>
+                                <p class="featured-paper-summary">A data-centric research framework for building and studying autonomous AI systems at scale.</p>
+                                <div class="featured-paper-links">
+                                    <a href="https://arxiv.org/pdf/2605.10906" target="_blank" rel="noopener noreferrer">PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="featured-paper">
+                            <div class="featured-paper-media">
+                                <img src="assets/publications/g2reader.png" alt="G2-Reader main figure">
+                                <span class="featured-paper-tag">ICML 2026</span>
+                            </div>
+                            <div class="featured-paper-body">
+                                <h4>G2-Reader: Dual Evolving Graphs for Multimodal Document QA</h4>
+                                <p class="featured-paper-authors"><strong>Yaxin Du*</strong>, Junru Song*, Yifan Zhou*, Cheng Wang, Jiahao Gu, Zimeng Chen, Menglan Chen, Wen Yao, Yang Yang, Ying Wen, Siheng Chen</p>
+                                <p class="featured-paper-note">ICML 2026</p>
+                                <p class="featured-paper-summary">A multimodal document understanding method that models evolving graph structures for question answering.</p>
+                                <div class="featured-paper-links">
+                                    <a href="https://arxiv.org/pdf/2601.22055" target="_blank" rel="noopener noreferrer">PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="featured-paper">
+                            <div class="featured-paper-media">
+                                <img src="assets/publications/infomosaic.png" alt="InfoMosaic-Bench main figure">
+                                <span class="featured-paper-tag">ICLR 2026</span>
+                            </div>
+                            <div class="featured-paper-body">
+                                <h4>InfoMosaic-Bench: Evaluating Multi-Source Information Seeking in Tool-Augmented Agents</h4>
+                                <p class="featured-paper-authors"><strong>Yaxin Du</strong>, Yuanshuo Zhang, Xiyuan Yang, Yifan Zhou, Cheng Wang, Gongyi Zou, Xianghe Pang, Zhiyu Li, Siheng Chen</p>
+                                <p class="featured-paper-note">ICLR 2026</p>
+                                <p class="featured-paper-summary">A benchmark for studying how tool-augmented agents gather and integrate evidence across multiple sources.</p>
+                                <div class="featured-paper-links">
+                                    <a href="https://arxiv.org/pdf/2510.02271" target="_blank" rel="noopener noreferrer">PDF</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="featured-paper">
+                            <div class="featured-paper-media">
+                                <img src="assets/publications/swedev.png" alt="SWE-Dev main figure">
+                                <span class="featured-paper-tag">NeurIPS Wksp</span>
+                            </div>
+                            <div class="featured-paper-body">
+                                <h4>SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development</h4>
+                                <p class="featured-paper-authors"><strong>Yaxin Du*</strong>, Yuzhu Cai*, Yifan Zhou, Cheng Wang, Yu Qian, Xianghe Pang, Qian Liu, Yue Hu, Siheng Chen</p>
+                                <p class="featured-paper-note">NeurIPS 2025 DL4C Workshop</p>
+                                <p class="featured-paper-summary">A software-engineering benchmark and training setting for autonomous feature-driven coding agents.</p>
+                                <div class="featured-paper-links">
+                                    <a href="https://arxiv.org/pdf/2505.16975" target="_blank" rel="noopener noreferrer">PDF</a>
+                                    <a href="https://github.com/DorothyDUUU/SWE-Dev" target="_blank" rel="noopener noreferrer">Code</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="featured-paper">
+                            <div class="featured-paper-media">
+                                <img src="assets/publications/feddqc.png" alt="FedDQC main figure">
+                                <span class="featured-paper-tag">ACL 2025</span>
+                            </div>
+                            <div class="featured-paper-body">
+                                <h4>FedDQC: Data Quality Control in Federated Instruction-tuning of Large Language Models</h4>
+                                <p class="featured-paper-authors"><strong>Yaxin Du</strong>, Rui Ye, Fengting Yuchi, Wanru Zhao, Jingjing Qu, Yanfeng Wang, Siheng Chen</p>
+                                <p class="featured-paper-note">ACL 2025 Findings</p>
+                                <p class="featured-paper-summary">A data-quality-control method for federated instruction tuning that improves robustness under heterogeneous client data quality.</p>
+                                <div class="featured-paper-links">
+                                    <a href="https://aclanthology.org/2025.findings-acl.791.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
 
                 <div class="publication-group">
                     <details class="publication-details">
-                        <summary>Other Publications</summary>
-                        <ul class="publications-list-simple muted-list">
-                            <li>
-                                <span class="venue">arXiv 2026</span> MIRA: Mid-training Rubric Anchoring for Source-Aware Data Selection<br>
-                                <span class="authors">H. Wang, <strong>Y. Du</strong>, J. Yang, J. Wu, S. Liu, Y. Zhang, P. Wang, S. Chen, T. Zheng, M. Zhou, X. Liu</span>
-                                <a href="https://arxiv.org/abs/2605.30288" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                            </li>
+                        <summary>Full Publication List</summary>
+                        <div class="publication-subgroup">
+                            <p class="group-label">Recent and Selected</p>
+                            <ul class="publications-list-simple">
+                                <li>
+                                    <span class="venue">arXiv 2026</span> MIRA: Mid-training Rubric Anchoring for Source-Aware Data Selection<br>
+                                    <span class="authors">Haowen Wang*, <strong>Yaxin Du*</strong>, Jian Yang, Jiajun Wu, Shukai Liu, Yuanshuo Zhang, Pingjie Wang, Siheng Chen, Tuney Zheng, Ming Zhou, Xianglong Liu, Bryan Dai</span><br>
+                                    <span class="citation-note">arXiv preprint</span>
+                                    <a href="https://arxiv.org/pdf/2605.30288" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">arXiv 2026</span> LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling<br>
+                                    <span class="authors">Jian Yang, Shawn Guo, Wei Zhang, Tianyu Zheng, <strong>Yaxin Du</strong>, Haau-Sing Li, Jiajun Wu, Yue Song, Yan Xing, Qingsong Cai, Zelong Huang, Chuan Hao, Ran Tao, Xianglong Liu, Wayne Xin Zhao, Mingjie Tang, Weifeng Lv, Ming Zhou, Bryan Dai</span><br>
+                                    <span class="citation-note">arXiv preprint</span>
+                                    <a href="https://arxiv.org/abs/2606.18023" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">arXiv 2026</span> HyperTool: Beyond Step-Wise Tool Calls for Tool-Augmented Agents<br>
+                                    <span class="authors"><strong>Yaxin Du*</strong>, Yifan Zhou*, Yujie Ge, Jiajun Wang, Xianghe Pang, Shuo Tang, Tuney Zheng, Bryan Dai, Jian Yang, Siheng Chen</span><br>
+                                    <span class="citation-note">arXiv preprint</span>
+                                    <a href="https://arxiv.org/pdf/2606.13663" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">arXiv 2026</span> DataMaster: Data-Centric Autonomous AI Research<br>
+                                    <span class="authors"><strong>Yaxin Du*</strong>, Xiyuan Yang*, Zhifan Zhou, Wanxu Liu, Zixing Lei, Zimeng Chen, Fenyi Liu, Haotian Wu, Yuzhu Cai, Zexi Liu, Xinyu Zhu, Wenhao Wang, Linfeng Zhang, Chen Qian, Siheng Chen</span><br>
+                                    <span class="citation-note">arXiv preprint</span>
+                                    <a href="https://arxiv.org/pdf/2605.10906" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">ICML 2026</span> G2-Reader: Dual Evolving Graphs for Multimodal Document QA<br>
+                                    <span class="authors"><strong>Yaxin Du*</strong>, Junru Song*, Yifan Zhou*, Cheng Wang, Jiahao Gu, Zimeng Chen, Menglan Chen, Wen Yao, Yang Yang, Ying Wen, Siheng Chen</span>
+                                    <a href="https://arxiv.org/pdf/2601.22055" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">ICML 2026</span> NTK-Selector: Selecting Auxiliary Data via Neural Tangent Kernels for Low-Resource Domains<br>
+                                    <span class="authors">Pingjie Wang, Hongcheng Liu, Yusheng Liao, Ziqing Fan, <strong>Yaxin Du</strong>, Shuo Tang, Yanfeng Wang, Yu Wang</span>
+                                    <a href="https://arxiv.org/pdf/2511.07380" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">ICLR 2026</span> InfoMosaic-Bench: Evaluating Multi-Source Information Seeking in Tool-Augmented Agents<br>
+                                    <span class="authors"><strong>Yaxin Du</strong>, Yuanshuo Zhang, Xiyuan Yang, Yifan Zhou, Cheng Wang, Gongyi Zou, Xianghe Pang, Zhiyu Li, Siheng Chen</span>
+                                    <a href="https://arxiv.org/pdf/2510.02271" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">arXiv 2025</span> SWE-Dev: Evaluating and Training Autonomous Feature-Driven Software Development<br>
+                                    <span class="authors"><strong>Yaxin Du*</strong>, Yuzhu Cai*, Yifan Zhou, Cheng Wang, Yu Qian, Xianghe Pang, Qian Liu, Yue Hu, Siheng Chen</span><br>
+                                    <span class="citation-note">NeurIPS 2025 DL4C Workshop</span>
+                                    <a href="https://arxiv.org/pdf/2505.16975" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                    <a href="https://github.com/DorothyDUUU/SWE-Dev" target="_blank" rel="noopener noreferrer">[Code]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">ICLR 2025</span> Self-evolving Multi-agent Collaboration Networks for Software Development<br>
+                                    <span class="authors">Yue Hu, Yuzhu Cai, <strong>Yaxin Du</strong>, Xinyu Zhu, Xiangrui Liu, Zijie Yu, Yuchen Hou, Shuo Tang, Siheng Chen</span>
+                                </li>
+                                <li>
+                                    <span class="venue">arXiv 2025</span> MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems<br>
+                                    <span class="authors">Rui Ye, Shuo Tang, Rui Ge, <strong>Yaxin Du</strong>, Zhenfei Yin, Siheng Chen, Jing Shao</span>
+                                    <a href="https://arxiv.org/abs/2503.03686" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">ACL 2025 Findings</span> FedDQC: Data Quality Control in Federated Instruction-tuning of Large Language Models<br>
+                                    <span class="authors"><strong>Yaxin Du</strong>, Rui Ye, Fengting Yuchi, Wanru Zhao, Jingjing Qu, Yanfeng Wang, Siheng Chen</span>
+                                    <a href="https://aclanthology.org/2025.findings-acl.791.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">KDD 2024</span> OpenFedLLM: Training Large Language Models on Decentralized Private Data via Federated Learning<br>
+                                    <span class="authors">Rui Ye, Wenhao Wang, Jingyi Chai, Dihan Li, Zexi Li, Yinda Xu, <strong>Yaxin Du</strong>, Yanfeng Wang, Siheng Chen</span>
+                                    <a href="https://dl.acm.org/doi/pdf/10.1145/3637528.3671582" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">NeurIPS 2024</span> FedLLM-Bench: Realistic Benchmarks for Federated Learning of Large Language Models<br>
+                                    <span class="authors">Rui Ye, Rui Ge, Xinyu Zhu, Jingyi Chai, <strong>Yaxin Du</strong>, Yang Liu, Yanfeng Wang, Siheng Chen</span>
+                                    <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/c8cdab0e890c59255c27977072fdb0f0-Paper-Datasets_and_Benchmarks_Track.pdf" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">ICLR 2024 Workshop</span> Enhancing Data Quality in Federated Fine-tuning of Large Language Models<br>
+                                    <span class="authors">Wanru Zhao*, <strong>Yaxin Du*</strong>, Nicholas Donald Lane, Siheng Chen, Yanfeng Wang</span>
+                                    <a href="https://arxiv.org/pdf/2403.04529" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                                <li>
+                                    <span class="venue">ICLR 2024</span> Fake It Till Make It: Federated Learning with Consensus-Oriented Generation<br>
+                                    <span class="authors">Rui Ye, <strong>Yaxin Du</strong>, Zhenyang Ni, Siheng Chen, Yanfeng Wang</span>
+                                    <a href="https://arxiv.org/pdf/2312.05966" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="publication-subgroup">
+                            <p class="group-label">Other Publications</p>
+                            <ul class="publications-list-simple muted-list">
                             <li>
                                 <span class="venue">arXiv 2026</span> EvoMaster: A Foundational Agent Framework for Building Evolving Autonomous Scientific Agents at Scale<br>
                                 <span class="authors">X. Zhu, Y. Cai, Z. Liu, C. Wang, F. Li, W. Jin, W. Liu, Z. Bing, B. Zheng, J. Chai, S. Tang, R. Ye, Y. Du, X. Pang, <strong>Y. Du</strong>, T. Miao, Y. Zhang, R. Liao, Z. Ding, L. Zhang, Y. Wang, W. E, S. Chen</span>
                                 <a href="https://arxiv.org/abs/2604.17406" target="_blank" rel="noopener noreferrer">[Paper]</a>
                             </li>
                             <li>
-                                <span class="venue">arXiv 2025</span> VLMGuard-R1: Proactive Safety Alignment for VLMs via Reasoning-Driven Prompt Optimization<br>
-                                <span class="authors">M. Chen, X. Pang, J. Dong, W. H. Wang, <strong>Y. Du</strong>, S. Chen</span>
-                                <a href="https://arxiv.org/pdf/2504.12661" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                <span class="venue">arXiv 2026</span> InCoder-32B-Thinking: Industrial Code World Model for Thinking<br>
+                                <span class="authors">J. Yang, W. Zhang, J. Wu, J. Cheng, T. Zheng, F. Xu, W. Gu, L. Jing, <strong>Y. Du</strong>, J. Li, et al.</span>
+                                <a href="https://arxiv.org/abs/2604.03144" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                            </li>
+                            <li>
+                                <span class="venue">arXiv 2026</span> InCoder-32B: Code Foundation Model for Industrial Scenarios<br>
+                                <span class="authors">J. Yang, W. Zhang, J. Wu, J. Cheng, S. Guo, H. Wang, W. Gu, <strong>Y. Du</strong>, J. Li, F. Xu, et al.</span>
+                                <a href="https://huggingface.co/papers/2603.16790" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                            </li>
+                            <li>
+                                <span class="venue">ACL 2026</span> MCP-Flow: Facilitating LLM Agents to Master Real-World, Diverse and Scaling MCP Tools<br>
+                                <span class="authors">W. Wang, P. Niu, Z. Xu, Z. Chen, J. Du, <strong>Y. Du</strong>, X. Pang, K. Huang, Y. Wang, et al.</span>
+                                <a href="https://arxiv.org/pdf/2510.24284" target="_blank" rel="noopener noreferrer">[Paper]</a>
                             </li>
                             <li>
                                 <span class="venue">arXiv 2025</span> BrowseMaster: Towards Scalable Web Browsing via Tool-Augmented Programmatic Agent Pair<br>
@@ -256,9 +430,9 @@
                                 <a href="https://arxiv.org/abs/2508.09129" target="_blank" rel="noopener noreferrer">[Paper]</a>
                             </li>
                             <li>
-                                <span class="venue">ACL 2026</span> MCP-Flow: Facilitating LLM Agents to Master Real-World, Diverse and Scaling MCP Tools<br>
-                                <span class="authors">W. Wang, P. Niu, Z. Xu, Z. Chen, J. Du, <strong>Y. Du</strong>, X. Pang, K. Huang, Y. Wang, et al.</span>
-                                <a href="https://arxiv.org/pdf/2510.24284" target="_blank" rel="noopener noreferrer">[Paper]</a>
+                                <span class="venue">arXiv 2025</span> VLMGuard-R1: Proactive Safety Alignment for VLMs via Reasoning-Driven Prompt Optimization<br>
+                                <span class="authors">M. Chen, X. Pang, J. Dong, W. H. Wang, <strong>Y. Du</strong>, S. Chen</span>
+                                <a href="https://arxiv.org/pdf/2504.12661" target="_blank" rel="noopener noreferrer">[Paper]</a>
                             </li>
                             <li>
                                 <span class="venue">arXiv 2025</span> Federated Instruction Tuning of LLMs with Domain Coverage Augmentation<br>
@@ -269,16 +443,6 @@
                                 <span class="authors">R. Yu, <strong>Y. Du</strong>, J. Li, A. Napolitano, J. Le Kernec</span>
                             </li>
                             <li>
-                                <span class="venue">arXiv 2026</span> InCoder-32B: Code Foundation Model for Industrial Scenarios<br>
-                                <span class="authors">J. Yang, W. Zhang, J. Wu, J. Cheng, S. Guo, H. Wang, W. Gu, <strong>Y. Du</strong>, J. Li, F. Xu, et al.</span>
-                                <a href="https://huggingface.co/papers/2603.16790" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                            </li>
-                            <li>
-                                <span class="venue">arXiv 2026</span> InCoder-32B-Thinking: Industrial Code World Model for Thinking<br>
-                                <span class="authors">J. Yang, W. Zhang, J. Wu, J. Cheng, T. Zheng, F. Xu, W. Gu, L. Jing, <strong>Y. Du</strong>, J. Li, et al.</span>
-                                <a href="https://arxiv.org/abs/2604.03144" target="_blank" rel="noopener noreferrer">[Paper]</a>
-                            </li>
-                            <li>
                                 <span class="venue">RadarConf 2022</span> A ViT Approach for Short-range Behaviour Recognition Using Radar Signals<br>
                                 <span class="authors"><strong>Y. Du</strong>, B. Li, J. Li, F. Fioranelli, J. Le Kernec</span>
                             </li>
@@ -286,8 +450,76 @@
                                 <span class="venue">CIE Radar 2021</span> Radar-based Human Activity Classification with Cyclostationarity<br>
                                 <span class="authors"><strong>Y. Du</strong>, J. Li, Z. Li, R. Yu, A. Napolitano, F. Fioranelli, J. Le Kernec</span>
                             </li>
-                        </ul>
+                            </ul>
+                        </div>
                     </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="reports" class="section">
+            <div class="container">
+                <h2>Technical Reports</h2>
+                <p class="publication-lead">
+                    Technical reports and model releases related to industrial coding models and test-time scaling.
+                </p>
+
+                <div class="featured-publications">
+                    <article class="featured-paper">
+                        <div class="featured-paper-media report-cover report-cover-loopcoder">
+                            <span class="featured-paper-tag">Tech Report</span>
+                            <p class="report-cover-date">Jun 2026</p>
+                            <h4 class="report-cover-title">LoopCoder-v2</h4>
+                            <p class="report-cover-subtitle">Efficient test-time computation scaling for code generation</p>
+                        </div>
+                        <div class="featured-paper-body">
+                            <h4>LoopCoder-v2: Only Loop Once for Efficient Test-Time Computation Scaling</h4>
+                            <p class="featured-paper-authors">Jian Yang, Shawn Guo, Wei Zhang, Tianyu Zheng, <strong>Yaxin Du</strong>, Haau-Sing Li, Jiajun Wu, Yue Song, Yan Xing, Qingsong Cai, Zelong Huang, Chuan Hao, Ran Tao, Xianglong Liu, Wayne Xin Zhao, Mingjie Tang, Weifeng Lv, Ming Zhou, Bryan Dai</p>
+                            <p class="featured-paper-note">Technical report</p>
+                            <p class="featured-paper-summary">A recent technical report on improving test-time computation scaling for coding models with a more efficient looping strategy.</p>
+                            <div class="featured-paper-links">
+                                <a href="https://arxiv.org/abs/2606.18023" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="featured-paper">
+                        <div class="featured-paper-media report-cover report-cover-incoder-thinking">
+                            <span class="featured-paper-tag">Tech Report</span>
+                            <p class="report-cover-date">Apr 2026</p>
+                            <h4 class="report-cover-title">InCoder-32B Thinking</h4>
+                            <p class="report-cover-subtitle">Reasoning-oriented industrial code model</p>
+                        </div>
+                        <div class="featured-paper-body">
+                            <h4>InCoder-32B-Thinking: Industrial Code World Model for Thinking</h4>
+                            <p class="featured-paper-authors">Jian Yang, Wei Zhang, Jiajun Wu, Jiajun Cheng, Tianyu Zheng, Fei Xu, Wenhao Gu, Linfeng Jing, <strong>Yaxin Du</strong>, Jun Li, et al.</p>
+                            <p class="featured-paper-note">Technical report · Model release</p>
+                            <p class="featured-paper-summary">A thinking-oriented extension of the InCoder series designed for stronger reasoning and code problem solving in industrial scenarios.</p>
+                            <div class="featured-paper-links">
+                                <a href="https://huggingface.co/Multilingual-Multimodal-NLP/IndustrialCoder-Thinking-32B-FP8" target="_blank" rel="noopener noreferrer">Model</a>
+                                <a href="https://arxiv.org/abs/2604.03144" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="featured-paper">
+                        <div class="featured-paper-media report-cover report-cover-incoder">
+                            <span class="featured-paper-tag">Tech Report</span>
+                            <p class="report-cover-date">Mar 2026</p>
+                            <h4 class="report-cover-title">InCoder-32B</h4>
+                            <p class="report-cover-subtitle">Industrial code foundation model</p>
+                        </div>
+                        <div class="featured-paper-body">
+                            <h4>InCoder-32B: Code Foundation Model for Industrial Scenarios</h4>
+                            <p class="featured-paper-authors">Jian Yang, Wei Zhang, Jiajun Wu, Jiajun Cheng, Shawn Guo, Haowen Wang, Wenhao Gu, <strong>Yaxin Du</strong>, Jun Li, Fei Xu, et al.</p>
+                            <p class="featured-paper-note">Technical report · Model release</p>
+                            <p class="featured-paper-summary">A 32B code foundation model built for practical industrial coding scenarios, with public model release and technical report.</p>
+                            <div class="featured-paper-links">
+                                <a href="https://huggingface.co/Multilingual-Multimodal-NLP/IndustrialCoder" target="_blank" rel="noopener noreferrer">Model</a>
+                                <a href="https://huggingface.co/papers/2603.16790" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -338,7 +570,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Yaxin Du. All rights reserved.</p>
-            <p>Last updated: April 2026</p>
+            <p>Last updated: June 2026</p>
         </div>
     </footer>
 </body>

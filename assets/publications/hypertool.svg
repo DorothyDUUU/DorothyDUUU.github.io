@@ -1,0 +1,27 @@
+<svg width="640" height="400" viewBox="0 0 640 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="400" rx="28" fill="#0F172A"/>
+  <rect x="28" y="28" width="584" height="344" rx="24" fill="url(#bg)"/>
+  <rect x="72" y="84" width="120" height="84" rx="18" fill="#ECFEFF" fill-opacity="0.96"/>
+  <rect x="260" y="64" width="132" height="90" rx="18" fill="#DBEAFE"/>
+  <rect x="450" y="108" width="112" height="76" rx="18" fill="#E0F2FE"/>
+  <path d="M192 126H260" stroke="#67E8F9" stroke-width="10" stroke-linecap="round"/>
+  <path d="M392 126H450" stroke="#38BDF8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M182 218C228 180 302 168 372 194C428 214 474 248 548 246" stroke="#A5F3FC" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="182" cy="218" r="14" fill="#67E8F9"/>
+  <circle cx="372" cy="194" r="14" fill="#22D3EE"/>
+  <circle cx="548" cy="246" r="14" fill="#0EA5E9"/>
+  <text x="74" y="115" fill="#0F172A" font-family="Georgia, serif" font-size="22" font-weight="700">Tool Plan</text>
+  <text x="74" y="145" fill="#334155" font-family="Georgia, serif" font-size="18">structured calls</text>
+  <text x="274" y="104" fill="#0F172A" font-family="Georgia, serif" font-size="22" font-weight="700">HyperTool</text>
+  <text x="274" y="134" fill="#334155" font-family="Georgia, serif" font-size="18">beyond step-wise</text>
+  <text x="458" y="140" fill="#0F172A" font-family="Georgia, serif" font-size="22" font-weight="700">Agent</text>
+  <text x="456" y="169" fill="#334155" font-family="Georgia, serif" font-size="18">flexible execution</text>
+  <text x="72" y="315" fill="white" font-family="Georgia, serif" font-size="44" font-weight="700">HyperTool</text>
+  <text x="72" y="350" fill="#D1FAE5" font-family="Georgia, serif" font-size="22">Tool-Augmented Agents</text>
+  <defs>
+    <linearGradient id="bg" x1="28" y1="28" x2="612" y2="372" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B3B5A"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+</svg>
