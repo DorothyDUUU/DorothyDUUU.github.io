@@ -73,7 +73,7 @@ nav a:hover {
 }
 
 .section h2 {
-    font-size: 2.2rem;
+    font-size: 1.75rem;
     margin-bottom: 1.4rem;
     color: var(--primary-color);
     font-weight: 700;
@@ -134,7 +134,7 @@ nav a:hover {
 }
 
 .about-profile-card h1 {
-    font-size: 2.75rem;
+    font-size: 1.75rem;
     color: var(--primary-color);
     margin-bottom: 0.7rem;
     font-weight: 700;
@@ -211,6 +211,16 @@ nav a:hover {
 
 .about-icon-links i {
     font-size: 1.15rem;
+}
+
+.custom-x-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.01em;
 }
 
 .about-wechat {
@@ -372,6 +382,13 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.news-detail-line {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--text-light);
+    line-height: 1.65;
+}
+
 .publications-list-simple .authors {
     font-size: 0.85rem;
     color: var(--text-light);
@@ -398,7 +415,7 @@ nav a:hover {
 
 .publication-group h3 {
     color: var(--primary-color);
-    font-size: 1.35rem;
+    font-size: 1.08rem;
     margin-bottom: 0.85rem;
 }
 
@@ -489,7 +506,7 @@ nav a:hover {
 
 .report-cover-title {
     color: white;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     line-height: 1.05;
     margin: 0 0 0.35rem;
 }
@@ -517,7 +534,7 @@ nav a:hover {
 
 .featured-paper-body h4 {
     color: var(--primary-color);
-    font-size: 1.35rem;
+    font-size: 1.08rem;
     line-height: 1.35;
     margin-bottom: 0.55rem;
 }
@@ -635,6 +652,11 @@ nav a:hover {
     margin-bottom: 0.65rem;
 }
 
+.blog-card h3 {
+    font-size: 1.08rem;
+    line-height: 1.35;
+}
+
 .blog-meta {
     color: var(--secondary-color);
     font-size: 0.85rem;
@@ -665,12 +687,13 @@ nav a:hover {
 }
 
 .blog-post h1 {
-    font-size: 2rem;
+    font-size: 1.55rem;
     line-height: 1.25;
 }
 
 .blog-post h2 {
     display: block;
+    font-size: 1.22rem;
     margin-top: 1.8rem;
     margin-bottom: 0.8rem;
 }
@@ -839,11 +862,11 @@ footer p {
     }
 
     .section h2 {
-        font-size: 1.6rem;
+        font-size: 1.28rem;
     }
 
     .about-profile-card h1 {
-        font-size: 2rem;
+        font-size: 1.55rem;
     }
 
     .featured-paper {
